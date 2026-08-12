@@ -9,6 +9,8 @@ const CONTENT_DIR = path.join(__dirname, '..', 'content', 'biens');
 const OUTPUT_FILE = path.join(__dirname, '..', 'data', 'properties.json');
 
 function main() {
+  fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
+
   if (!fs.existsSync(CONTENT_DIR)) {
     console.log('Aucun dossier content/biens trouve, creation d\'un fichier vide.');
     fs.writeFileSync(OUTPUT_FILE, '[]');
