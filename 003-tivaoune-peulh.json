@@ -1,0 +1,16 @@
+{
+  "titre_annonce": "Terrain - Tivaoune Peulh",
+  "type": "Terrain",
+  "zone": "Tivaoune Peulh",
+  "superficie": 150,
+  "prix": 12000000,
+  "titre_foncier": "Titre Foncier Global",
+  "statut": "disponible",
+  "description": "Situé à Socabeg, à 3 km de la VDN 3 et de la mer, à 450 m du marché Socabeg, à 950 m de la Gendarmerie. Zone déjà habitée avec eau et électricité.",
+  "moratoire_disponible": false,
+  "moratoire_prix": null,
+  "moratoire_acompte": null,
+  "moratoire_mensualite": null,
+  "moratoire_duree": null,
+  "photo": ""
+}
