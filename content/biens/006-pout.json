@@ -1,0 +1,16 @@
+{
+  "titre_annonce": "Terrain - Pout",
+  "type": "Terrain",
+  "zone": "Pout",
+  "superficie": 210,
+  "prix": 4000000,
+  "titre_foncier": "Délibération",
+  "statut": "disponible",
+  "description": "Zone résidentielle avec eau et électricité, située à 2 km de la route et à 5 km de l'AIBD.",
+  "moratoire_disponible": false,
+  "moratoire_prix": null,
+  "moratoire_acompte": null,
+  "moratoire_mensualite": null,
+  "moratoire_duree": null,
+  "photo": ""
+}

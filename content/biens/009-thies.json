@@ -1,0 +1,16 @@
+{
+  "titre_annonce": "Terrain - Thiès",
+  "type": "Terrain",
+  "zone": "Thiès",
+  "superficie": 150,
+  "prix": 1050000,
+  "titre_foncier": "Notification de Bail",
+  "statut": "disponible",
+  "description": "À 5 mn de la VDN 3, à 2 km des 3000 logements, derrière les logements SICAP.",
+  "moratoire_disponible": true,
+  "moratoire_prix": 1250000,
+  "moratoire_acompte": 398000,
+  "moratoire_mensualite": 48500,
+  "moratoire_duree": 18,
+  "photo": ""
+}
