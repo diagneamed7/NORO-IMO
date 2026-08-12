@@ -1,0 +1,16 @@
+{
+  "titre_annonce": "Terrain - Kounoune 2",
+  "type": "Terrain",
+  "zone": "Kounoune 2",
+  "superficie": 224,
+  "prix": 18000000,
+  "titre_foncier": "Titre Foncier Individuel",
+  "statut": "disponible",
+  "description": "Situé à 1 km de Niague, de l'école Alioune Sall et du péage de Sédima. Zone viabilisée, cité entièrement en cours de pavage, canalisation disponible.",
+  "moratoire_disponible": false,
+  "moratoire_prix": null,
+  "moratoire_acompte": null,
+  "moratoire_mensualite": null,
+  "moratoire_duree": null,
+  "photo": ""
+}

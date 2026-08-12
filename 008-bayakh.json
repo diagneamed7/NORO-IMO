@@ -1,0 +1,16 @@
+{
+  "titre_annonce": "Terrain - Bayakh",
+  "type": "Terrain",
+  "zone": "Bayakh",
+  "superficie": 150,
+  "prix": 2500000,
+  "titre_foncier": "Délibération",
+  "statut": "disponible",
+  "description": "À 7 km du Lac Rose, 3 km de Génération Foot et de la VDN 3, 5 km de la mer, 800 m de la route. Sol Dior, idéal pour la construction.",
+  "moratoire_disponible": false,
+  "moratoire_prix": null,
+  "moratoire_acompte": null,
+  "moratoire_mensualite": null,
+  "moratoire_duree": null,
+  "photo": ""
+}
