@@ -1,0 +1,16 @@
+{
+  "titre_annonce": "Terrain - Yène Kao",
+  "type": "Terrain",
+  "zone": "Yène Kao",
+  "superficie": 300,
+  "prix": 15000000,
+  "titre_foncier": "Délibération",
+  "statut": "disponible",
+  "description": "Position angle. Terrain bien placé, accessible et idéal pour habitation ou investissement.",
+  "moratoire_disponible": false,
+  "moratoire_prix": null,
+  "moratoire_acompte": null,
+  "moratoire_mensualite": null,
+  "moratoire_duree": null,
+  "photo": ""
+}
