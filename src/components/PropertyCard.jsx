@@ -24,6 +24,8 @@ export function PropertyCard({ property, onClick }) {
   const imageUrl = property.photo || getDefaultImage(property.type)
   const hasImage = property.photo && property.photo.trim() !== ''
 
+  const statusClass = property.statut === 'reserve' ? 'reserve' : property.statut === 'vendu' ? 'vendu' : ''
+
   return (
     <div className="card-bien" onClick={onClick}>
       <div className="card-media" style={{ backgroundImage: `url(${imageUrl})` }}>
@@ -32,8 +34,7 @@ export function PropertyCard({ property, onClick }) {
             <div className="card-media-overlay-text">{property.type}</div>
           </div>
         )}
-
-        <div className={`status-ribbon ${property.statut === 'reserve' ? 'reserve' : property.statut === 'vendu' ? 'vendu' : ''}`}>
+        <div className={`status-ribbon ${statusClass}`}>
           {property.statut === 'disponible' ? 'Disponible' : property.statut === 'reserve' ? 'Réservé' : 'Vendu'}
         </div>
       </div>
@@ -44,16 +45,8 @@ export function PropertyCard({ property, onClick }) {
         <h3 className="card-title">{property.titre || `${property.type} à ${property.zone}`}</h3>
 
         <div className="card-details">
-          {property.superficie && (
-            <span>
-              📐 {property.superficie} m²
-            </span>
-          )}
-          {property.type && (
-            <span>
-              🏠 {property.type}
-            </span>
-          )}
+          {property.superficie && <span>📐 {property.superficie} m²</span>}
+          {property.type && <span>🏠 {property.type}</span>}
         </div>
 
         <div className="card-price">
@@ -62,9 +55,7 @@ export function PropertyCard({ property, onClick }) {
         </div>
 
         {property.moratoire && (
-          <div className="badge-moratoire">
-            ✓ Paiement échelonné disponible
-          </div>
+          <div className="badge-moratoire">✓ Paiement échelonné disponible</div>
         )}
       </div>
     </div>

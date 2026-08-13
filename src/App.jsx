@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { TopBar } from './components/TopBar'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
-import { SearchBar } from './components/SearchBar'
 import { PropertyGrid } from './components/PropertyGrid'
 import { ContactModal } from './components/ContactModal'
 import { Services } from './components/Services'
@@ -10,7 +9,7 @@ import { Footer } from './components/Footer'
 import { useProperties } from './data/useProperties'
 
 function App() {
-  const { properties, loading, error } = useProperties()
+  const { properties, loading } = useProperties()
   const [contactModalOpen, setContactModalOpen] = useState(false)
   const [contactModalType, setContactModalType] = useState('contact')
 
@@ -25,27 +24,18 @@ function App() {
     return () => window.removeEventListener('openContactModal', handleOpenModal)
   }, [])
 
+  if (loading) {
+    return <div>Chargement...</div>
+  }
+
   return (
     <>
       <TopBar />
       <Header />
       <Hero />
-
-      <section id="proprietes" className="section gray">
-        <div className="container">
-          <SearchBar onFilter={() => {}} />
-        </div>
-      </section>
-
-      <PropertyGrid properties={properties} loading={loading} error={error} />
-
-      <section id="services">
-        <Services />
-      </section>
-
-      <section id="contact">
-        <Footer />
-      </section>
+      <PropertyGrid properties={properties} />
+      <Services />
+      <Footer />
 
       <ContactModal
         isOpen={contactModalOpen}

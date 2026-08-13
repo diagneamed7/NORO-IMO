@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { PropertyCard } from './PropertyCard'
 import { PropertyModal } from './PropertyModal'
-import { RouteDivider } from './RouteDivider'
 
-export function PropertyGrid({ properties, loading, error }) {
+export function PropertyGrid({ properties }) {
   const [selectedProperty, setSelectedProperty] = useState(null)
   const [filters, setFilters] = useState({
     type: '',
@@ -24,62 +23,101 @@ export function PropertyGrid({ properties, loading, error }) {
     setFilters(newFilters)
   }
 
-  if (loading) {
-    return (
-      <section id="proprietes" className="section">
-        <div className="container">
-          <div className="section-head center">
-            <div className="eyebrow">Chargement...</div>
-            <RouteDivider />
-            <h2>Chargement des propriétés</h2>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (error || properties.length === 0) {
-    return (
-      <section id="proprietes" className="section">
-        <div className="container">
-          <div className="section-head center">
-            <div className="eyebrow">Aucune propriété</div>
-            <RouteDivider />
-            <h2>Aucune propriété trouvée</h2>
-            <p>Veuillez vérifier votre connexion ou revenir plus tard.</p>
-          </div>
-        </div>
-      </section>
-    )
+  if (!properties || properties.length === 0) {
+    return null
   }
 
   return (
     <>
-      <section id="proprietes" className="section gray">
+      <section className="section gray">
+        <div className="container">
+          <div className="search-card">
+            <div className="search-grid">
+              <div className="field">
+                <label>Type de bien</label>
+                <select value={filters.type} onChange={(e) => handleFilter({ ...filters, type: e.target.value })}>
+                  <option value="">Tous les types</option>
+                  <option value="Terrain">Terrain</option>
+                  <option value="Maison">Maison</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Appartement">Appartement</option>
+                  <option value="Bureau">Bureau</option>
+                  <option value="Immeuble">Immeuble</option>
+                  <option value="Local commercial">Local commercial</option>
+                </select>
+              </div>
+
+              <div className="field">
+                <label>Zone</label>
+                <select value={filters.zone} onChange={(e) => handleFilter({ ...filters, zone: e.target.value })}>
+                  <option value="">Toutes les zones</option>
+                  <option value="Kounoune 2">Kounoune 2</option>
+                  <option value="Tivaoune Peulh">Tivaoune Peulh</option>
+                  <option value="Yené Kao">Yené Kao</option>
+                  <option value="Guéréo">Guéréo</option>
+                  <option value="Pout">Pout</option>
+                  <option value="Bambilor">Bambilor</option>
+                  <option value="Bayakh">Bayakh</option>
+                  <option value="Thiès">Thiès</option>
+                  <option value="Toubab Dialaw">Toubab Dialaw</option>
+                  <option value="Yené Guédj">Yené Guédj</option>
+                </select>
+              </div>
+
+              <div className="field">
+                <label>Prix min (M)</label>
+                <input type="number" placeholder="0" value={filters.prixMin} onChange={(e) => handleFilter({ ...filters, prixMin: e.target.value })} />
+              </div>
+
+              <div className="field">
+                <label>Prix max (M)</label>
+                <input type="number" placeholder="999" value={filters.prixMax} onChange={(e) => handleFilter({ ...filters, prixMax: e.target.value })} />
+              </div>
+
+              <div className="field">
+                <label>Transaction</label>
+                <select>
+                  <option>Vente</option>
+                  <option>Location</option>
+                  <option>Moratoire</option>
+                </select>
+              </div>
+
+              <button className="btn-search" onClick={() => handleFilter({ type: '', zone: '', prixMin: '', prixMax: '' })}>
+                Réinitialiser
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section gray">
         <div className="container">
           <div className="section-head center">
             <div className="eyebrow">Notre catalogue</div>
-            <RouteDivider />
+            <div className="route-divider">
+              <svg viewBox="0 0 64 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="var(--blue)" />
+                    <stop offset="100%" stopColor="var(--orange)" />
+                  </linearGradient>
+                </defs>
+                <path d="M0 8 Q 16 2, 32 8 T 64 8" stroke="url(#gradient2)" strokeWidth="3" fill="none" strokeLinecap="round" />
+              </svg>
+            </div>
             <h2>Nos propriétés d'exception</h2>
             <p>Découvrez nos sélections de terrains, maisons et villas aux meilleurs prix du Sénégal.</p>
           </div>
 
           <div className="grid-biens">
-            {filteredProperties.length > 0 ? (
-              filteredProperties.map((property) => (
-                <PropertyCard
-                  key={property.id}
-                  property={property}
-                  onClick={() => setSelectedProperty(property)}
-                />
-              ))
-            ) : (
-              <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px' }}>
-                <p style={{ fontSize: '16px', color: '#666' }}>
-                  Aucune propriété ne correspond à vos critères de recherche.
-                </p>
-              </div>
-            )}
+            {filteredProperties.map((property) => (
+              <PropertyCard
+                key={property.id}
+                property={property}
+                onClick={() => setSelectedProperty(property)}
+              />
+            ))}
           </div>
         </div>
       </section>

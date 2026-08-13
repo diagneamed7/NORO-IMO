@@ -6,7 +6,6 @@ export function PropertyModal({ property, onClose }) {
   useEffect(() => {
     setIsActive(true)
     document.body.style.overflow = 'hidden'
-
     return () => {
       document.body.style.overflow = 'unset'
     }
@@ -23,6 +22,15 @@ export function PropertyModal({ property, onClose }) {
     }
   }
 
+  const formatPrice = (price) => {
+    if (!price) return 'Nous consulter'
+    return new Intl.NumberFormat('fr-FR', {
+      style: 'currency',
+      currency: 'XOF',
+      maximumFractionDigits: 0,
+    }).format(price)
+  }
+
   const getDefaultImage = (type) => {
     const images = {
       Terrain: 'https://images.unsplash.com/photo-1500382017468-7049faf12a51?w=600&h=400&fit=crop',
@@ -36,95 +44,46 @@ export function PropertyModal({ property, onClose }) {
     return images[type] || images.Terrain
   }
 
-  const formatPrice = (price) => {
-    if (!price) return 'Nous consulter'
-    return new Intl.NumberFormat('fr-FR', {
-      style: 'currency',
-      currency: 'XOF',
-      maximumFractionDigits: 0,
-    }).format(price)
-  }
-
   const imageUrl = property.photo || getDefaultImage(property.type)
 
   return (
     <div className={`modal-overlay ${isActive ? 'active' : ''}`} onClick={handleOverlayClick}>
       <div className="modal-content">
-        <button className="modal-close" onClick={handleClose}>
-          ✕
-        </button>
+        <button className="modal-close" onClick={handleClose}>✕</button>
 
-        <img
-          src={imageUrl}
-          alt={property.titre}
-          style={{
-            width: '100%',
-            height: '300px',
-            objectFit: 'cover',
-            borderRadius: '8px',
-            marginBottom: '20px',
-          }}
-        />
+        <img src={imageUrl} alt={property.titre} style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
 
         <h2 className="modal-title">{property.titre || `${property.type} à ${property.zone}`}</h2>
 
         <div style={{ marginBottom: '20px' }}>
-          <p style={{ color: 'var(--blue)', fontWeight: '600', marginBottom: '5px', fontSize: '14px' }}>
-            {property.zone}
-          </p>
-          <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-            Type : {property.type}
-          </p>
-          {property.superficie && (
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-              Superficie : {property.superficie} m²
-            </p>
-          )}
-          <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
-            Titre foncier : {property.titre}
-          </p>
+          <p style={{ color: 'var(--blue)', fontWeight: '600', marginBottom: '5px', fontSize: '14px' }}>{property.zone}</p>
+          <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>Type : {property.type}</p>
+          {property.superficie && <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>Superficie : {property.superficie} m²</p>}
+          <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>Titre foncier : {property.titre}</p>
           <p style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
             Statut : {property.statut === 'disponible' ? '✓ Disponible' : property.statut === 'reserve' ? '⏱ Réservé' : '✕ Vendu'}
           </p>
         </div>
 
         <div style={{ marginBottom: '20px', padding: '15px', backgroundColor: 'var(--gray)', borderRadius: '8px' }}>
-          <div style={{ fontSize: '12px', color: '#999', textTransform: 'uppercase', marginBottom: '5px' }}>
-            Prix de vente
-          </div>
-          <div style={{ fontSize: '28px', fontWeight: '700', color: 'var(--orange)' }}>
-            {formatPrice(property.prix)}
-          </div>
+          <div style={{ fontSize: '12px', color: '#999', textTransform: 'uppercase', marginBottom: '5px' }}>Prix de vente</div>
+          <div style={{ fontSize: '28px', fontWeight: '700', color: 'var(--orange)' }}>{formatPrice(property.prix)}</div>
         </div>
 
-        {property.description && (
+        {property.commentaire && (
           <div style={{ marginBottom: '20px' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: 'var(--blue-ink)', marginBottom: '10px' }}>
-              Description
-            </h3>
-            <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
-              {property.description}
-            </p>
+            <h3 style={{ fontSize: '16px', fontWeight: '700', color: 'var(--blue-ink)', marginBottom: '10px' }}>Description</h3>
+            <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>{property.commentaire}</p>
           </div>
         )}
 
         {property.moratoire && (
           <div style={{ marginBottom: '20px', padding: '15px', backgroundColor: '#e8f4f8', borderRadius: '8px', borderLeft: '4px solid var(--blue)' }}>
-            <h3 style={{ fontSize: '16px', fontWeight: '700', color: 'var(--blue)', marginBottom: '10px' }}>
-              💳 Options de paiement échelonné
-            </h3>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>
-              Prix (moratoire) : <strong>{formatPrice(property.moratoire.prix)}</strong>
-            </p>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>
-              Acompte : <strong>{formatPrice(property.moratoire.acompte)}</strong>
-            </p>
-            <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>
-              Mensualité : <strong>{formatPrice(property.moratoire.mensualite)}</strong>
-            </p>
-            <p style={{ fontSize: '14px', color: '#666' }}>
-              Durée : <strong>{property.moratoire.duree} mois</strong>
-            </p>
+            <h3 style={{ fontSize: '16px', fontWeight: '700', color: 'var(--blue)', marginBottom: '10px' }}>💳 Options de paiement échelonné</h3>
+            <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>Prix (moratoire) : <strong>{formatPrice(property.moratoire.prix)}</strong></p>
+            <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>Acompte : <strong>{formatPrice(property.moratoire.acompte)}</strong></p>
+            <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>Mensualité : <strong>{formatPrice(property.moratoire.mensualite)}</strong></p>
+            <p style={{ fontSize: '14px', color: '#666' }}>Durée : <strong>{property.moratoire.duree} mois</strong></p>
           </div>
         )}
 
@@ -139,11 +98,7 @@ export function PropertyModal({ property, onClose }) {
           >
             💬 Contacter sur WhatsApp
           </button>
-          <button
-            className="btn-ghost"
-            style={{ flex: 1 }}
-            onClick={handleClose}
-          >
+          <button className="btn-ghost" style={{ flex: 1 }} onClick={handleClose}>
             Fermer
           </button>
         </div>
