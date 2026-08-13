@@ -1,6 +1,18 @@
 [build]
-  command = "node scripts/build-data.js"
-  publish = "."
+  command = "node scripts/build-data.js && mkdir -p public/data && cp data/properties.json public/data/properties.json && npm run build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Redirection pour /admin/ (Decap CMS)
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Redirection pour les assets d'upload
+[[redirects]]
+  from = "/uploads/*"
+  to = "/uploads/:splat"
+  status = 200

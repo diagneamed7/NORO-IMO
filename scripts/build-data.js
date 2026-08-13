@@ -2,8 +2,12 @@
 // Il lit tous les fichiers dans content/biens/ (geres par l'admin Decap CMS)
 // et les compile dans data/properties.json, que le site charge au chargement.
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const CONTENT_DIR = path.join(__dirname, '..', 'content', 'biens');
 const OUTPUT_FILE = path.join(__dirname, '..', 'data', 'properties.json');
