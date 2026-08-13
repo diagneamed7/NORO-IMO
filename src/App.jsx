@@ -39,9 +39,13 @@ function App() {
 
       <PropertyGrid properties={properties} loading={loading} error={error} />
 
-      <Services />
+      <section id="services">
+        <Services />
+      </section>
 
-      <Footer />
+      <section id="contact">
+        <Footer />
+      </section>
 
       <ContactModal
         isOpen={contactModalOpen}

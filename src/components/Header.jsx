@@ -34,8 +34,12 @@ export function Header({ onBurgerClick }) {
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('services') }}>
             Services
           </a>
-          <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('simulateur') }}>
-            Simulateur
+          <a href="#" onClick={(e) => {
+            e.preventDefault()
+            const event = new CustomEvent('openContactModal', { detail: { type: 'devis' } })
+            window.dispatchEvent(event)
+          }}>
+            Devis
           </a>
           <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>
             Contact
