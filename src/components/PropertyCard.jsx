@@ -1,63 +1,79 @@
-export function PropertyCard({ property, onClick }) {
-  const formatPrice = (price) => {
-    if (!price) return 'Nous consulter'
-    return new Intl.NumberFormat('fr-FR', {
-      style: 'currency',
-      currency: 'XOF',
-      maximumFractionDigits: 0,
-    }).format(price)
+const PHOTO_TERRAIN =
+  'https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?fm=jpg&q=70&w=800&auto=format&fit=crop'
+const PHOTO_MAISON =
+  'https://images.unsplash.com/photo-1760473537243-72168ffd273c?fm=jpg&q=70&w=800&auto=format&fit=crop'
+
+function fmt(n) {
+  return n == null ? 'Prix sur demande' : n.toLocaleString('fr-FR') + ' FCFA'
+}
+
+export function PropertyCard({ property, onOpen }) {
+  const statut = property.statut || 'disponible'
+
+  let ribbon = null
+  if (statut === 'vendu') {
+    ribbon = <span className="ribbon alt">Vendu</span>
+  } else if (statut === 'reserve') {
+    ribbon = (
+      <span className="ribbon" style={{ background: '#b3261e' }}>
+        Reserve
+      </span>
+    )
+  } else if (property.moratoire) {
+    ribbon = <span className="ribbon">Moratoire</span>
+  } else {
+    ribbon = <span className="ribbon alt">Exclusivite</span>
   }
 
-  const getDefaultImage = (type) => {
-    const images = {
-      Terrain: 'https://images.unsplash.com/photo-1500382017468-7049faf12a51?w=400&h=250&fit=crop',
-      Maison: 'https://images.unsplash.com/photo-1570129477492-45a003537e07?w=400&h=250&fit=crop',
-      Villa: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=250&fit=crop',
-      Appartement: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=250&fit=crop',
-      Bureau: 'https://images.unsplash.com/photo-1554995207-c18fbb1d4a02?w=400&h=250&fit=crop',
-      Immeuble: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=250&fit=crop',
-      'Local commercial': 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop',
-    }
-    return images[type] || images.Terrain
-  }
-
-  const imageUrl = property.photo || getDefaultImage(property.type)
-  const hasImage = property.photo && property.photo.trim() !== ''
-
-  const statusClass = property.statut === 'reserve' ? 'reserve' : property.statut === 'vendu' ? 'vendu' : ''
+  const txnBadge = property.moratoire ? 'Vente / Moratoire' : 'Vente'
+  const supText = property.superficie ? `${property.superficie} m2` : 'Sur plan'
+  const fallbackPhoto = property.type === 'Maison' ? PHOTO_MAISON : PHOTO_TERRAIN
+  const photo = property.photo ? property.photo : fallbackPhoto
 
   return (
-    <div className="card-bien" onClick={onClick}>
-      <div className="card-media" style={{ backgroundImage: `url(${imageUrl})` }}>
-        {!hasImage && (
-          <div className="card-media-overlay">
-            <div className="card-media-overlay-text">{property.type}</div>
-          </div>
-        )}
-        <div className={`status-ribbon ${statusClass}`}>
-          {property.statut === 'disponible' ? 'Disponible' : property.statut === 'reserve' ? 'Réservé' : 'Vendu'}
-        </div>
+    <div className="card-bien" onClick={() => onOpen(property.id)}>
+      <div className="card-media" style={{ backgroundImage: `url('${photo}')` }}>
+        <div className="card-media-overlay"></div>
+        {ribbon}
+        <span className="txn-badge">{txnBadge}</span>
+        <span className="media-badge">{property.type === 'Maison' ? '🏠' : '🌍'}</span>
       </div>
-
-      <div className="card-content">
-        <div className="card-zone">{property.zone}</div>
-        <div className="card-type">{property.type}</div>
-        <h3 className="card-title">{property.titre || `${property.type} à ${property.zone}`}</h3>
-
-        <div className="card-details">
-          {property.superficie && <span>📐 {property.superficie} m²</span>}
-          {property.type && <span>🏠 {property.type}</span>}
+      <div className="card-body">
+        <div className="card-type">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          {property.zone}
         </div>
-
-        <div className="card-price">
-          <div className="card-price-label">À partir de</div>
-          {formatPrice(property.prix)}
+        <div className="card-zone">
+          {property.type} · Reference NORO-{String(property.id).padStart(3, '0')}
         </div>
-
-        {property.moratoire && (
-          <div className="badge-moratoire">✓ Paiement échelonné disponible</div>
-        )}
+        <div className="card-meta">
+          <span>{property.type}</span>
+          <span>·</span>
+          <span>{supText}</span>
+          <span>·</span>
+          <span>{property.titre}</span>
+        </div>
+        <div className="card-price-row">
+          <span className="card-price">{fmt(property.prix)}</span>
+          <span
+            className="btn-detail"
+            onClick={(e) => {
+              e.stopPropagation()
+              onOpen(property.id)
+            }}
+          >
+            Voir le detail
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </span>
+        </div>
       </div>
     </div>
   )
 }
+
+export { fmt, PHOTO_TERRAIN, PHOTO_MAISON }

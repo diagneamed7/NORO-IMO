@@ -1,82 +1,125 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+
+const CONTACT_CONFIG = {
+  rdv: {
+    title: 'Prendre rendez-vous',
+    subtitle: 'Choisissez un creneau, un conseiller NORO vous confirme le rendez-vous.',
+    showDate: true,
+  },
+  devis: {
+    title: 'Demander un devis',
+    subtitle: 'Decrivez votre projet, nous vous envoyons un devis personnalise.',
+    showDate: false,
+  },
+  contact: {
+    title: 'Nous contacter',
+    subtitle: 'Une question ? Ecrivez-nous, nous revenons vers vous rapidement.',
+    showDate: false,
+  },
+}
 
 export function ContactModal({ isOpen, onClose, type = 'contact' }) {
-  const [isActive, setIsActive] = useState(isOpen)
-  const [formData, setFormData] = useState({
-    nom: '',
-    email: '',
-    telephone: '',
-    message: '',
-  })
+  const cfg = CONTACT_CONFIG[type] || CONTACT_CONFIG.contact
+  const [nom, setNom] = useState('')
+  const [tel, setTel] = useState('')
+  const [date, setDate] = useState('')
+  const [msg, setMsg] = useState('')
+  const [feedback, setFeedback] = useState(null)
 
-  useEffect(() => {
-    setIsActive(isOpen)
-    if (isOpen) document.body.style.overflow = 'hidden'
-    else document.body.style.overflow = 'unset'
-  }, [isOpen])
+  const submit = () => {
+    if (!nom.trim() || !tel.trim()) {
+      setFeedback({ error: true, text: 'Merci de renseigner au moins votre nom et votre telephone.' })
+      return
+    }
+    let text = `Bonjour NORO Immobilier, je souhaite : ${cfg.title}.\nNom : ${nom}\nTelephone : ${tel}`
+    if (cfg.showDate && date) text += `\nDate souhaitee : ${date}`
+    if (msg) text += `\nMessage : ${msg}`
+
+    window.open(`https://wa.me/221770000000?text=${encodeURIComponent(text)}`, '_blank')
+    setFeedback({
+      error: false,
+      text: 'Votre demande a ete preparee et ouverte dans WhatsApp. Envoyez le message pour la transmettre a NORO Immobilier.',
+    })
+  }
 
   const handleClose = () => {
-    setIsActive(false)
-    setTimeout(onClose, 300)
+    setNom('')
+    setTel('')
+    setDate('')
+    setMsg('')
+    setFeedback(null)
+    onClose()
   }
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let message = ''
-    if (type === 'rdv') {
-      message = `Bonjour,\n\nJe souhaite prendre un rendez-vous.\n\nMon nom : ${formData.nom}\nMon email : ${formData.email}\nMon téléphone : ${formData.telephone}\n\nMessage : ${formData.message}`
-    } else if (type === 'devis') {
-      message = `Bonjour,\n\nJe souhaite demander un devis.\n\nMon nom : ${formData.nom}\nMon email : ${formData.email}\nMon téléphone : ${formData.telephone}\n\nDétails de ma demande : ${formData.message}`
-    } else {
-      message = `Bonjour,\n\nMon nom : ${formData.nom}\nMon email : ${formData.email}\nMon téléphone : ${formData.telephone}\n\nMessage : ${formData.message}`
-    }
-    window.open(`https://wa.me/221775000000?text=${encodeURIComponent(message)}`, '_blank')
-    handleClose()
-  }
-
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) handleClose()
-  }
-
-  const titles = { rdv: 'Prendre un rendez-vous', devis: 'Demander un devis', contact: 'Nous contacter' }
 
   return (
-    <div className={`modal-overlay ${isActive ? 'active' : ''}`} onClick={handleOverlayClick}>
-      <div className="modal-content">
-        <button className="modal-close" onClick={handleClose}>✕</button>
-        <h2 className="modal-title">{titles[type] || 'Nous contacter'}</h2>
-
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Nom complet *</label>
-            <input type="text" name="nom" required value={formData.nom} onChange={handleChange} placeholder="Votre nom" />
-          </div>
-
-          <div className="form-group">
-            <label>Email *</label>
-            <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder="votre@email.com" />
-          </div>
-
-          <div className="form-group">
-            <label>Téléphone *</label>
-            <input type="tel" name="telephone" required value={formData.telephone} onChange={handleChange} placeholder="+221 77 000 00 00" />
-          </div>
-
-          <div className="form-group">
-            <label>Message *</label>
-            <textarea name="message" required value={formData.message} onChange={handleChange} placeholder="Votre message..." />
-          </div>
-
-          <div className="form-actions">
-            <button type="submit" className="btn-primary">Envoyer via WhatsApp</button>
-            <button type="button" className="btn-secondary" onClick={handleClose}>Annuler</button>
-          </div>
-        </form>
+    <div
+      className={isOpen ? 'modal-overlay open' : 'modal-overlay'}
+      onClick={(e) => {
+        if (e.target.classList.contains('modal-overlay')) handleClose()
+      }}
+    >
+      <div className="modal">
+        <button className="modal-close" onClick={handleClose}>
+          ✕
+        </button>
+        {isOpen && (
+          <>
+            <p className="eyebrow">NORO Immobilier</p>
+            <h3>{cfg.title}</h3>
+            <p className="desc" style={{ marginTop: 6 }}>
+              {cfg.subtitle}
+            </p>
+            <div style={{ marginTop: 20, display: 'grid', gap: 12 }}>
+              <div className="field">
+                <label>Nom complet</label>
+                <input type="text" placeholder="Votre nom" value={nom} onChange={(e) => setNom(e.target.value)} />
+              </div>
+              <div className="field">
+                <label>Telephone / WhatsApp</label>
+                <input
+                  type="tel"
+                  placeholder="+221 77 000 00 00"
+                  value={tel}
+                  onChange={(e) => setTel(e.target.value)}
+                />
+              </div>
+              {cfg.showDate && (
+                <div className="field" style={{ marginBottom: 12 }}>
+                  <label>Date souhaitee</label>
+                  <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+                </div>
+              )}
+              <div className="field">
+                <label>Message</label>
+                <input
+                  type="text"
+                  placeholder="Precisez votre besoin (bien, zone, budget...)"
+                  value={msg}
+                  onChange={(e) => setMsg(e.target.value)}
+                />
+              </div>
+            </div>
+            {feedback && (
+              <div
+                style={{
+                  marginTop: 14,
+                  padding: '12px 14px',
+                  background: 'var(--gray)',
+                  borderRadius: 10,
+                  fontSize: '13.5px',
+                  color: feedback.error ? '#b3261e' : 'var(--blue-ink)',
+                }}
+              >
+                {feedback.text}
+              </div>
+            )}
+            <div className="modal-actions">
+              <button className="btn-primary" style={{ flex: 1 }} onClick={submit}>
+                Envoyer via WhatsApp
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   )
