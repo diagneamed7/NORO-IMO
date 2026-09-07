@@ -12,6 +12,16 @@ const __dirname = path.dirname(__filename);
 const CONTENT_DIR = path.join(__dirname, '..', 'content', 'biens');
 const OUTPUT_FILE = path.join(__dirname, '..', 'data', 'properties.json');
 
+function slugify(str) {
+  if (!str) return 'bien';
+  return str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '') // Enlève accents
+    .replace(/[^a-z0-9]+/g, '-') // Remplace non-alphanumeriques par tirets
+    .replace(/(^-|-$)/g, ''); // Enlève tirets début/fin
+}
+
 function main() {
   fs.mkdirSync(path.dirname(OUTPUT_FILE), { recursive: true });
 
@@ -37,10 +47,15 @@ function main() {
       };
     }
 
+    // Générer slug lisible : type-zone-id
+    const slug = `${slugify(data.type || 'terrain')}-${slugify(data.zone || 'lieu')}-${id}`;
+
     return {
       id,
+      slug,
       zone: data.zone || '',
       type: data.type || 'Terrain',
+      transaction: data.transaction || 'Vente',
       superficie: data.superficie || null,
       prix: data.prix || null,
       titre: data.titre_foncier || '',

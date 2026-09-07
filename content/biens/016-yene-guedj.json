@@ -1,16 +1,16 @@
 {
-  "titre_annonce": "Maison - Yène Guedj",
+  "titre_annonce": "Maison - Y\u00e8ne Guedj",
   "type": "Maison",
-  "zone": "Yène Guedj",
+  "zone": "Y\u00e8ne Guedj",
   "superficie": null,
   "prix": null,
-  "titre_foncier": "Délibération",
+  "titre_foncier": "D\u00e9lib\u00e9ration",
   "statut": "disponible",
-  "description": "RDC : 2 chambres avec SDB, 1 chambre simple, salon, cuisine, toilette, garage. 1er étage : 2 chambres avec SDB, 1 chambre simple, 2 salons, balcon, cuisine, toilette. Maison spacieuse, idéale pour habitation familiale. Position angle, terrain bien placé et accessible, zone avec eau et électricité.",
+  "description": "RDC : 2 chambres avec SDB, 1 chambre simple, salon, cuisine, toilette, garage. 1er \u00e9tage : 2 chambres avec SDB, 1 chambre simple, 2 salons, balcon, cuisine, toilette. Maison spacieuse, id\u00e9ale pour habitation familiale. Position angle, terrain bien plac\u00e9 et accessible, zone avec eau et \u00e9lectricit\u00e9.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }

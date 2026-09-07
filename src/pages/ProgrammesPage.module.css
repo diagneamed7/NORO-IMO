@@ -1,0 +1,356 @@
+.page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* === HERO SECTION === */
+.heroSection {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.heroContainer {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 52px 24px 64px;
+}
+
+.breadcrumb {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 16px 0 0;
+}
+
+.description {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 17px;
+  max-width: 60ch;
+  text-wrap: pretty;
+}
+
+/* === PROGRAMMES GRID === */
+.programmesSection {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 58px 24px 0;
+}
+
+.programmesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+}
+
+.programmeCard {
+  background: var(--color-white);
+  border: 1px solid #ECECEC;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.programmeCard:hover {
+  box-shadow: 0 20px 46px rgba(6, 38, 79, 0.14);
+  transform: translateY(-5px);
+}
+
+.cardImage {
+  position: relative;
+  height: 236px;
+  overflow: hidden;
+  background: #F5F5F5;
+  background-size: cover;
+  background-position: center;
+}
+
+.statut {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 6px;
+}
+
+.cardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+
+.cardTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.cardDesc {
+  margin: 0;
+  color: #6A7480;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.cardFooter {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #F1F2F4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+}
+
+.prix {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--color-primary);
+}
+
+.dispo {
+  font-size: 13.5px;
+  color: #6A7480;
+}
+
+.cardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.btnPrimary {
+  flex: 1;
+  text-align: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent);
+}
+
+.btnWhatsapp {
+  width: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #DCE3EC;
+  border-radius: 10px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btnWhatsapp:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: var(--color-white);
+}
+
+/* === AVANTAGES SECTION === */
+.avantagesSection {
+  background: #F5F5F5;
+  margin-top: 80px;
+  padding: 66px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sectionHeader {
+  max-width: 58ch;
+  margin-bottom: 32px;
+}
+
+.sectionLabel {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.sectionTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 12px 0 0;
+}
+
+.avantagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  gap: 18px;
+}
+
+.avantageCard {
+  background: var(--color-white);
+  border: 1px solid #ECECEC;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.avantageTitle {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16.5px;
+  margin: 0;
+}
+
+.avantageText {
+  margin: 9px 0 0;
+  color: #6A7480;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* === CTA SECTION === */
+.ctaSection {
+  margin-top: 80px;
+  background: var(--color-primary);
+  padding: 64px 0;
+}
+
+.ctaContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.ctaText {
+  flex: 1 1 420px;
+}
+
+.ctaTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  color: var(--color-white);
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.ctaDesc {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16.5px;
+  margin: 12px 0 0;
+  max-width: 52ch;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btnWhatsappCta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 17px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btnWhatsappCta:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btnContact {
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 17px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btnContact:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .ctaContent {
+    flex-direction: column;
+  }
+
+  .ctaButtons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btnWhatsappCta,
+  .btnContact {
+    width: 100%;
+    justify-content: center;
+  }
+}

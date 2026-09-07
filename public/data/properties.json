@@ -1,104 +1,127 @@
 [
   {
     "id": 1,
+    "slug": "villa-kounoune-2-1",
     "zone": "Kounoune 2",
-    "type": "Terrain",
+    "type": "Villa",
+    "transaction": "Vente",
     "superficie": 224,
-    "prix": 18000000,
+    "prix": 16450000,
     "titre": "Titre Foncier Individuel",
     "statut": "disponible",
     "commentaire": "Situé à 1 km de Niague, de l'école Alioune Sall et du péage de Sédima. Zone viabilisée, cité entièrement en cours de pavage, canalisation disponible.",
-    "moratoire": null,
-    "photo": null
+    "moratoire": {
+      "prix": null,
+      "acompte": null,
+      "mensualite": null,
+      "duree": null
+    },
+    "photo": "/uploads/log2.jpg"
   },
   {
     "id": 2,
+    "slug": "terrain-kounoune-2-2",
     "zone": "Kounoune 2",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 150,
     "prix": 14500000,
     "titre": "Titre Foncier Individuel",
     "statut": "disponible",
     "commentaire": "Situé à 1 km de Niague, de l'école Alioune Sall et du péage de Sédima. Zone viabilisée, cité entièrement en cours de pavage, canalisation disponible.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 3,
+    "slug": "terrain-tivaoune-peulh-3",
     "zone": "Tivaoune Peulh",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 150,
     "prix": 12000000,
     "titre": "Titre Foncier Global",
     "statut": "disponible",
     "commentaire": "Situé à Socabeg, à 3 km de la VDN 3 et de la mer, à 450 m du marché Socabeg, à 950 m de la Gendarmerie. Zone déjà habitée avec eau et électricité.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1747854805840-9be7d5e360e6?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 4,
+    "slug": "terrain-yene-kao-4",
     "zone": "Yène Kao",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 180,
     "prix": 4500000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Situé à 8 km de l'AIBD, à 2,5 km de la mer et de la route principale, à 1,5 km du stade de Yène, et 500 m des habitations.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1506695041619-5dd4f46960b7?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 5,
+    "slug": "terrain-guereo-5",
     "zone": "Guéréo",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 225,
     "prix": 4000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Situé à 100 m de la route principale, à 4 km de la mer, à 6 km de Somone et Ndayane, à 3 km de l'entrée autoroute à péage de Sindia, à 15 mn de l'AIBD.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1653663786108-21ca52a24171?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 6,
+    "slug": "terrain-pout-6",
     "zone": "Pout",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 210,
     "prix": 4000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Zone résidentielle avec eau et électricité, située à 2 km de la route et à 5 km de l'AIBD.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1586859821397-c81e4971ca82?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 7,
+    "slug": "terrain-bambilor-7",
     "zone": "Bambilor",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 150,
     "prix": 3500000,
     "titre": "Notification Mairie",
     "statut": "disponible",
     "commentaire": "Zone déjà habitée, située à 1 km de la route principale, à 3 km de la mairie de Bambilor, à 5 km du péage de Sébikotane.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1655367382408-59b9b8a11e92?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 8,
+    "slug": "terrain-bayakh-8",
     "zone": "Bayakh",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 150,
     "prix": 2500000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "À 7 km du Lac Rose, 3 km de Génération Foot et de la VDN 3, 5 km de la mer, 800 m de la route. Sol Dior, idéal pour la construction.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1655319446878-44e5c1e31551?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 9,
+    "slug": "terrain-thies-9",
     "zone": "Thiès",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 150,
     "prix": 1050000,
     "titre": "Notification de Bail",
@@ -110,90 +133,104 @@
       "mensualite": 48500,
       "duree": 18
     },
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1465541064977-5a2d76b09f1f?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 10,
+    "slug": "terrain-yene-kao-10",
     "zone": "Yène Kao",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 300,
     "prix": 15000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Position angle. Terrain bien placé, accessible et idéal pour habitation ou investissement.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1600270074098-f51a52d71a37?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 11,
+    "slug": "terrain-yene-guedj-11",
     "zone": "Yène Guedj",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 300,
     "prix": 8000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Première position sur la route, accessible, bien situé et idéal pour habitation. Zone déjà habitée avec eau et électricité.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1637555754372-54538a035312?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 12,
+    "slug": "terrain-yene-guedj-12",
     "zone": "Yène Guedj",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 300,
     "prix": 7500000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Première position sur la route, accessible, bien situé et idéal pour habitation ou investissement.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1461175827210-5ceac3e39dd2?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 13,
+    "slug": "terrain-yene-guedj-13",
     "zone": "Yène Guedj",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 150,
     "prix": 4000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Troisième position sur la route. Très accessible et bien situé, idéal pour habitation ou investissement, avec eau et électricité.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 14,
+    "slug": "terrain-yene-guedj-14",
     "zone": "Yène Guedj",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 300,
     "prix": 14000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Position angle. Terrain bien placé, accessible et idéal pour habitation ou investissement. Zone avec eau et électricité.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1587745890135-20db8c79b027?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 15,
+    "slug": "terrain-toubab-dialaw-15",
     "zone": "Toubab Dialaw",
     "type": "Terrain",
+    "transaction": "Vente",
     "superficie": 600,
     "prix": 35000000,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "Position angle, situé à 4 mn de la route principale, à 100 m du Centre Foot Bokandé. Terrain bien situé, accessible, avec eau et électricité.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1747854805840-9be7d5e360e6?fm=jpg&q=70&w=800&auto=format&fit=crop"
   },
   {
     "id": 16,
+    "slug": "maison-yene-guedj-16",
     "zone": "Yène Guedj",
     "type": "Maison",
+    "transaction": "Vente",
     "superficie": null,
     "prix": null,
     "titre": "Délibération",
     "statut": "disponible",
     "commentaire": "RDC : 2 chambres avec SDB, 1 chambre simple, salon, cuisine, toilette, garage. 1er étage : 2 chambres avec SDB, 1 chambre simple, 2 salons, balcon, cuisine, toilette. Maison spacieuse, idéale pour habitation familiale. Position angle, terrain bien placé et accessible, zone avec eau et électricité.",
     "moratoire": null,
-    "photo": null
+    "photo": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?fm=jpg&q=70&w=800&auto=format&fit=crop"
   }
 ]

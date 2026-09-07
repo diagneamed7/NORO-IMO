@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #FFFFFF; color: #222222; font-family: "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #0A4D9B; text-decoration: none; }
+  a:hover { color: #F57C00; }
+  button { font: inherit; color: inherit; }
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+<dc-import name="SiteHeader" hint-size="100%,140px"></dc-import>
+
+<section style="background:#0A4D9B;padding:44px 0 40px;color:#FFFFFF">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <nav style="font-size:13.5px;color:rgba(255,255,255,.72);display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <a href="Accueil NORO Immo.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Accueil</a><span>/</span>
+      <a href="Programmes.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Programmes</a><span>/</span>
+      <span style="color:#FFFFFF">Cité NORO — Diamniadio</span>
+    </nav>
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-top:16px">
+      <div>
+        <span style="display:inline-block;background:#F57C00;font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;padding:6px 12px;border-radius:6px">En commercialisation</span>
+        <h1 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 0">Cité NORO — Diamniadio</h1>
+        <p style="margin:10px 0 0;color:rgba(255,255,255,.82);font-size:16px;display:flex;align-items:center;gap:8px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Diamniadio, à 8 min du pôle urbain — 120 parcelles
+        </p>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:13.5px;color:rgba(255,255,255,.7)">Prix d'entrée</div>
+        <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(24px,3vw,32px)">12 000 000 FCFA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:34px 24px 0">
+  <div style="border-radius:18px;overflow:hidden;border:1px solid #ECECEC;position:relative;height:clamp(280px,46vw,520px);background:#F5F5F5">
+    <image-slot id="fp-main" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="{{ mainPhoto }}" credit="{{ mainCredit }}" credit-href="{{ mainCreditHref }}" placeholder="Vue du programme"></image-slot>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:14px">
+    <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="4">
+      <button onClick="{{ g.select }}" style="border:2px solid {{ g.border }};border-radius:12px;overflow:hidden;padding:0;cursor:pointer;background:#F5F5F5;position:relative;height:96px">
+        <image-slot id="fp-thumb-{{ g.i }}" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="{{ g.photo }}" credit="{{ g.credit }}" credit-href="{{ g.creditHref }}" placeholder="Vue"></image-slot>
+      </button>
+    </sc-for>
+  </div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:52px 24px 0">
+  <div style="display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start">
+    <div style="flex:1 1 460px;min-width:0">
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);margin:0;letter-spacing:-.01em">Le programme</h2>
+      <p style="margin:14px 0 0;font-size:16px;line-height:1.75;color:#3C4650;text-wrap:pretty">La Cité NORO est un lotissement de 120 parcelles viabilisées de 200 à 400 m², implanté à huit minutes du pôle urbain de Diamniadio et à vingt minutes de l'aéroport AIBD. Voirie tracée et compactée, réseau d'eau et branchement électrique sont livrés avant la remise des lots.</p>
+      <p style="margin:14px 0 0;font-size:16px;line-height:1.75;color:#3C4650;text-wrap:pretty">Chaque parcelle est vendue sous titre foncier morcelé, avec bornage contradictoire réalisé par un géomètre agréé. Les acquéreurs qui le souhaitent peuvent enchaîner directement sur une construction clé en main assurée par nos équipes.</p>
+
+      <h3 style="font-family:Manrope,sans-serif;font-weight:800;font-size:20px;margin:34px 0 0">Caractéristiques</h3>
+      <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+        <div style="background:#F5F5F5;border-radius:12px;padding:18px"><div style="font-size:13px;color:#6A7480">Surfaces des lots</div><div style="font-family:Manrope,sans-serif;font-weight:700;font-size:16.5px;margin-top:5px">200 à 400 m²</div></div>
+        <div style="background:#F5F5F5;border-radius:12px;padding:18px"><div style="font-size:13px;color:#6A7480">Document</div><div style="font-family:Manrope,sans-serif;font-weight:700;font-size:16.5px;margin-top:5px">Titre foncier morcelé</div></div>
+        <div style="background:#F5F5F5;border-radius:12px;padding:18px"><div style="font-size:13px;color:#6A7480">Viabilisation</div><div style="font-family:Manrope,sans-serif;font-weight:700;font-size:16.5px;margin-top:5px">Eau, électricité, voirie</div></div>
+        <div style="background:#F5F5F5;border-radius:12px;padding:18px"><div style="font-size:13px;color:#6A7480">Bornage</div><div style="font-family:Manrope,sans-serif;font-weight:700;font-size:16.5px;margin-top:5px">Géomètre agréé</div></div>
+        <div style="background:#F5F5F5;border-radius:12px;padding:18px"><div style="font-size:13px;color:#6A7480">Construction</div><div style="font-family:Manrope,sans-serif;font-weight:700;font-size:16.5px;margin-top:5px">Possible avec NORO</div></div>
+        <div style="background:#F5F5F5;border-radius:12px;padding:18px"><div style="font-size:13px;color:#6A7480">Livraison des lots</div><div style="font-family:Manrope,sans-serif;font-weight:700;font-size:16.5px;margin-top:5px">Immédiate</div></div>
+      </div>
+
+      <h3 style="font-family:Manrope,sans-serif;font-weight:800;font-size:20px;margin:34px 0 0">Plan de masse</h3>
+      <div style="margin-top:16px;border:1px solid #ECECEC;border-radius:16px;overflow:hidden;position:relative;height:clamp(240px,34vw,400px);background:#F5F5F5">
+        <image-slot id="fp-plan" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="contain" src="https://images.unsplash.com/photo-1669003152238-5bd17a5bb19c?fm=jpg&q=70&w=1400&auto=format&fit=crop" credit="Photo par Point3D Commercial Imaging Ltd. sur Unsplash" credit-href="https://unsplash.com/@3dottawa" placeholder="Plan de masse du lotissement"></image-slot>
+      </div>
+      <p style="margin:10px 0 0;font-size:13px;color:#8A929C">Plan indicatif — le plan de masse coté est remis avec la brochure.</p>
+
+      <h3 style="font-family:Manrope,sans-serif;font-weight:800;font-size:20px;margin:34px 0 0">Disponibilités</h3>
+      <div style="margin-top:16px;border:1px solid #ECECEC;border-radius:14px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;background:#0A4D9B;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:13.5px">
+          <span style="padding:14px 18px">Type de lot</span><span style="padding:14px 18px">Prix cash</span><span style="padding:14px 18px">Restants</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;font-size:14.5px;border-bottom:1px solid #F1F2F4">
+          <span style="padding:14px 18px">200 m²</span><span style="padding:14px 18px;font-weight:600">12 000 000 FCFA</span><span style="padding:14px 18px;color:#6A7480">21 lots</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;font-size:14.5px;border-bottom:1px solid #F1F2F4">
+          <span style="padding:14px 18px">300 m²</span><span style="padding:14px 18px;font-weight:600">17 500 000 FCFA</span><span style="padding:14px 18px;color:#6A7480">12 lots</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;font-size:14.5px">
+          <span style="padding:14px 18px">400 m²</span><span style="padding:14px 18px;font-weight:600">22 800 000 FCFA</span><span style="padding:14px 18px;color:#6A7480">5 lots</span>
+        </div>
+      </div>
+
+      <h3 style="font-family:Manrope,sans-serif;font-weight:800;font-size:20px;margin:34px 0 0">Localisation</h3>
+      <div style="margin-top:16px;border:1px solid #ECECEC;border-radius:16px;overflow:hidden;height:340px">
+        <iframe title="Carte de Diamniadio" src="https://www.openstreetmap.org/export/embed.html?bbox=-17.22%2C14.69%2C-17.14%2C14.75&amp;layer=mapnik" style="width:100%;height:100%;border:0" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <aside style="flex:0 1 320px;position:sticky;top:110px;display:flex;flex-direction:column;gap:16px">
+      <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:18px;padding:26px;box-shadow:0 20px 50px rgba(6,38,79,.1)">
+        <div style="font-size:13px;color:#6A7480">Parcelle 200 m² — cash</div>
+        <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:27px;color:#0A4D9B;margin-top:4px">12 000 000 FCFA</div>
+        <div style="height:1px;background:#F1F2F4;margin:18px 0"></div>
+        <div style="font-size:13px;color:#6A7480">En moratoire 24 mois</div>
+        <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:22px;color:#222222;margin-top:4px">550 000 FCFA / mois</div>
+        <div style="font-size:13px;color:#6A7480;margin-top:6px">après acompte de 20 % (2 400 000 FCFA)</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:22px">
+          <a href="Contact.dc.html" style="text-align:center;background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:15.5px;padding:15px;border-radius:12px" style-hover="background:#0A4D9B">Réserver un lot</a>
+          <a href="#" onClick="{{ onBrochure }}" style="text-align:center;border:1.5px solid #DCE3EC;color:#0A4D9B;font-family:Manrope,sans-serif;font-weight:700;font-size:15.5px;padding:14px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:9px" style-hover="background:#0A4D9B;color:#FFFFFF;border-color:#0A4D9B">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Télécharger la brochure
+          </a>
+          <a href="https://wa.me/221770000000" style="text-align:center;background:#25D366;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:15.5px;padding:15px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:9px" style-hover="background:#0A4D9B">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-4-2.4 10 10 0 0 1-2-3c-.2-.6-.3-1.3 0-1.8.2-.4.6-.8 1-1 .3-.1.7 0 .9.3l.8 1.4c.1.3 0 .5-.1.7l-.4.5c-.1.2-.2.4 0 .6.5.9 1.5 1.9 2.5 2.4.2.1.4 0 .6-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.8c.2.1.3.4.3.6 0 .1 0 .2-.1.3Z"/></svg>
+            Poser une question
+          </a>
+        </div>
+        <sc-if value="{{ brochureAsked }}">
+          <p style="margin:14px 0 0;background:#F5F5F5;border-radius:10px;padding:12px;font-size:13.5px;color:#0A4D9B;font-weight:600">La brochure PDF vous sera envoyée par WhatsApp ou e-mail après confirmation de vos coordonnées.</p>
+        </sc-if>
+      </div>
+      <div style="background:#F5F5F5;border-radius:18px;padding:24px">
+        <p style="margin:0;font-family:Manrope,sans-serif;font-weight:700;font-size:15px">Visite du site</p>
+        <p style="margin:10px 0 0;font-size:14.5px;color:#5B6572;line-height:1.6">Visites guidées les samedis matin, sur inscription. Depuis l'étranger : visite vidéo en direct avec un conseiller.</p>
+        <a href="Contact.dc.html" style="display:inline-block;margin-top:14px;font-family:Manrope,sans-serif;font-weight:700;font-size:14.5px;border-bottom:1.5px solid #F57C00;padding-bottom:3px">Réserver ma visite →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:70px 24px 0">
+  <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);margin:0 0 26px">Autres programmes</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+    <sc-for list="{{ autres }}" as="p" hint-placeholder-count="3">
+      <article style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s ease,transform .3s ease" style-hover="box-shadow:0 18px 40px rgba(6,38,79,.12);transform:translateY(-4px)">
+        <div style="position:relative;height:180px;overflow:hidden;background:#F5F5F5">
+          <image-slot id="fp-autre-{{ p.id }}" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="{{ p.photo }}" credit="{{ p.credit }}" credit-href="{{ p.creditHref }}" placeholder="Programme"></image-slot>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:#F57C00">{{ p.statut }}</span>
+          <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:18px;margin:0">{{ p.nom }}</h3>
+          <p style="margin:0;font-size:14px;color:#6A7480">{{ p.prixDep }}</p>
+          <a href="Fiche-programme.dc.html" style="margin-top:auto;font-family:Manrope,sans-serif;font-weight:700;font-size:14.5px">Voir le programme →</a>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<div style="height:80px"></div>
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { photos: [], idx: 0, autres: [], brochureAsked: false };
+
+  componentDidMount() {
+    import("./noro-data.js").then((m) => {
+      const p = m.PH;
+      this.setState({
+        photos: [p.aerienA, p.terrainA, p.aerienB, p.maisons],
+        autres: m.PROGRAMMES.filter((x) => x.id !== "cite-noro-diamniadio"),
+      });
+    });
+  }
+
+  renderVals() {
+    const { photos, idx } = this.state;
+    const main = photos[idx] || {};
+    return {
+      mainPhoto: main.photo,
+      mainCredit: main.credit,
+      mainCreditHref: main.creditHref,
+      gallery: photos.map((p, i) => ({
+        i,
+        photo: p.photo,
+        credit: p.credit,
+        creditHref: p.creditHref,
+        border: i === idx ? "#F57C00" : "#ECECEC",
+        select: () => this.setState({ idx: i }),
+      })),
+      autres: this.state.autres,
+      brochureAsked: this.state.brochureAsked,
+      onBrochure: (e) => { e.preventDefault(); this.setState({ brochureAsked: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>

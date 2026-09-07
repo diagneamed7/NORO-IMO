@@ -1,16 +1,16 @@
 {
-  "titre_annonce": "Terrain - Guéréo",
+  "titre_annonce": "Terrain - Gu\u00e9r\u00e9o",
   "type": "Terrain",
-  "zone": "Guéréo",
+  "zone": "Gu\u00e9r\u00e9o",
   "superficie": 225,
   "prix": 4000000,
-  "titre_foncier": "Délibération",
+  "titre_foncier": "D\u00e9lib\u00e9ration",
   "statut": "disponible",
-  "description": "Situé à 100 m de la route principale, à 4 km de la mer, à 6 km de Somone et Ndayane, à 3 km de l'entrée autoroute à péage de Sindia, à 15 mn de l'AIBD.",
+  "description": "Situ\u00e9 \u00e0 100 m de la route principale, \u00e0 4 km de la mer, \u00e0 6 km de Somone et Ndayane, \u00e0 3 km de l'entr\u00e9e autoroute \u00e0 p\u00e9age de Sindia, \u00e0 15 mn de l'AIBD.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1653663786108-21ca52a24171?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }

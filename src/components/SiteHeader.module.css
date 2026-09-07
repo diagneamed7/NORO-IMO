@@ -1,0 +1,233 @@
+/* Top Bar */
+.topBar {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 9px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 26px;
+}
+
+.contactItem {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactItem:hover {
+  color: var(--color-accent);
+}
+
+.hours {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.socialIcon {
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.socialIcon:hover {
+  color: var(--color-accent);
+}
+
+.quoteBtn {
+  margin-left: 6px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.quoteBtn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-200);
+  box-shadow: 0 2px 18px rgba(10, 77, 155, 0.06);
+}
+
+.headerContent {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.divider {
+  display: block;
+  width: 1px;
+  height: 34px;
+  background: var(--color-gray-200);
+}
+
+.tagline {
+  font-family: var(--font-primary);
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  max-width: 120px;
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 14.5px;
+}
+
+.nav a {
+  color: var(--color-black);
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav a:hover {
+  background: var(--color-gray-100);
+  color: var(--color-primary);
+}
+
+.cta {
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  padding: 13px 22px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 20px rgba(10, 77, 155, 0.22);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Mobile Menu Button */
+.menuBtn {
+  background: var(--color-primary);
+  border: 0;
+  color: var(--color-white);
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menuBtn:hover {
+  background: var(--color-accent);
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  border-top: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  padding: 10px 24px 18px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: 16px;
+}
+
+.mobileNav a {
+  color: var(--color-black);
+  padding: 13px 4px;
+  border-bottom: 1px solid var(--color-gray-100);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mobileNav a:hover {
+  color: var(--color-primary);
+}
+
+.mobileCta {
+  margin-top: 12px;
+  text-align: center;
+  background: var(--color-primary);
+  color: var(--color-white) !important;
+  font-weight: var(--font-weight-bold);
+  padding: 14px;
+  border-radius: var(--radius-full);
+  border-bottom: none !important;
+  transition: all 0.2s ease;
+}
+
+.mobileCta:hover {
+  background: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 1120px) {
+  .socialLinks {
+    display: none;
+  }
+
+  .nav,
+  .cta {
+    display: none;
+  }
+}

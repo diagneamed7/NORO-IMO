@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/build-data.js && mkdir -p public/data && cp data/properties.json public/data/properties.json && npm run build"
+  command = "node scripts/build-data.js && node scripts/build-testimonials.js && mkdir -p public/data && cp data/properties.json public/data/properties.json && cp data/testimonials.json public/data/testimonials.json && node scripts/build-sitemap.js && npm run build"
   publish = "dist"
 
 [build.environment]
@@ -15,4 +15,10 @@
 [[redirects]]
   from = "/uploads/*"
   to = "/uploads/:splat"
+  status = 200
+
+# SPA redirect for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200

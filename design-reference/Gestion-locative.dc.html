@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #FFFFFF; color: #222222; font-family: "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #0A4D9B; text-decoration: none; }
+  a:hover { color: #F57C00; }
+  input, select, button, textarea { font: inherit; color: inherit; }
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+<dc-import name="SiteHeader" hint-size="100%,140px"></dc-import>
+
+<section style="position:relative;min-height:420px;display:flex;align-items:flex-end;isolation:isolate">
+  <div style="position:absolute;inset:0;overflow:hidden;z-index:0">
+    <image-slot id="gl-hero" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?fm=jpg&q=70&w=1800&auto=format&fit=crop" credit="Photo par Joel Filipe sur Unsplash" credit-href="https://unsplash.com/@joelfilip" placeholder="Immeuble en gestion"></image-slot>
+  </div>
+  <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,rgba(6,38,79,.94) 0%,rgba(10,77,155,.84) 50%,rgba(10,77,155,.45) 100%)"></div>
+  <div style="position:relative;z-index:2;max-width:1280px;width:100%;margin:0 auto;padding:70px 24px 56px;color:#FFFFFF">
+    <nav style="font-size:13.5px;color:rgba(255,255,255,.72);display:flex;gap:8px;align-items:center">
+      <a href="Accueil NORO Immo.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Accueil</a><span>/</span><span style="color:#FFFFFF">Gestion locative</span>
+    </nav>
+    <h1 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0;max-width:24ch">Votre bien géré comme si vous étiez sur place</h1>
+    <p style="margin:14px 0 0;color:rgba(255,255,255,.86);font-size:17px;max-width:56ch;text-wrap:pretty">Encaissement des loyers, entretien, relances, rapports mensuels : NORO prend la main sur la vie quotidienne de votre bien, au Sénégal comme depuis l'étranger.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px">
+      <a href="#mandat" style="background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:16px 30px;border-radius:999px" style-hover="background:#FFFFFF;color:#0A4D9B">Confier mon bien</a>
+      <a href="#prestations" style="border:1.5px solid rgba(255,255,255,.7);color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:15px 28px;border-radius:999px" style-hover="background:#FFFFFF;color:#0A4D9B">Voir les prestations</a>
+    </div>
+  </div>
+</section>
+
+<section id="prestations" style="max-width:1280px;margin:0 auto;padding:76px 24px 0">
+  <div style="max-width:58ch">
+    <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Ce que comprend le mandat</span>
+    <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,40px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Nos prestations de gestion</h2>
+  </div>
+  <div style="margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px">
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(6,38,79,.1)">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Encaissement des loyers</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Quittances émises, loyers reversés à date fixe, relances en cas de retard.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(6,38,79,.1)">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 1-5 5L4 17v3h3l5.7-5.7a4 4 0 0 1 5-5Z"/></svg></span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Entretien &amp; réparations</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Artisans vérifiés, devis soumis avant intervention, suivi photo des travaux.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(6,38,79,.1)">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h5"/></svg></span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Rapport mensuel</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Encaissements, charges, incidents et solde net, envoyés par e-mail ou WhatsApp.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(6,38,79,.1)">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="8" r="4"/></svg></span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Sélection du locataire</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Dossiers étudiés, garanties contrôlées, bail et état des lieux rédigés.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(6,38,79,.1)">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 4 6v6c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Sécurité juridique</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Baux conformes, gestion des congés et des litiges, appui d'un huissier partenaire.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px;transition:transform .3s ease,box-shadow .3s ease" style-hover="transform:translateY(-4px);box-shadow:0 16px 36px rgba(6,38,79,.1)">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg></span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Interlocuteur diaspora</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Un conseiller dédié, joignable sur votre fuseau horaire, virements internationaux acceptés.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#F5F5F5;margin-top:80px;padding:60px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:34px">
+    <div style="text-align:center">
+      <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(32px,4vw,46px);color:#0A4D9B;line-height:1">7 %</div>
+      <div style="margin-top:8px;font-size:14.5px;color:#5B6572">d'honoraires sur les loyers encaissés</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(32px,4vw,46px);color:#0A4D9B;line-height:1">130<span style="color:#F57C00">+</span></div>
+      <div style="margin-top:8px;font-size:14.5px;color:#5B6572">lots en gestion pour nos clients</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(32px,4vw,46px);color:#0A4D9B;line-height:1">96<span style="color:#F57C00">%</span></div>
+      <div style="margin-top:8px;font-size:14.5px;color:#5B6572">de taux d'occupation moyen</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(32px,4vw,46px);color:#0A4D9B;line-height:1">48h</div>
+      <div style="margin-top:8px;font-size:14.5px;color:#5B6572">délai moyen d'intervention technique</div>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:76px 24px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
+    <div>
+      <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Propriétaires à l'étranger</span>
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Pensé pour la diaspora</h2>
+      <ul style="margin:22px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px">
+        <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.6"><span style="color:#F57C00;font-weight:700">✓</span> Mise en gestion à distance, par procuration notariée</li>
+        <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.6"><span style="color:#F57C00;font-weight:700">✓</span> Reversement par virement international ou mobile money</li>
+        <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.6"><span style="color:#F57C00;font-weight:700">✓</span> Visites vidéo du bien sur simple demande</li>
+        <li style="display:flex;gap:12px;font-size:15.5px;line-height:1.6"><span style="color:#F57C00;font-weight:700">✓</span> Suivi des taxes et charges locales à votre place</li>
+      </ul>
+    </div>
+    <figure style="margin:0;background:#FFFFFF;border:1px solid #ECECEC;border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:16px">
+      <div style="color:#F57C00;font-size:15px;letter-spacing:3px">★★★★★</div>
+      <blockquote style="margin:0;font-size:16px;line-height:1.7;text-wrap:pretty">« NORO gère mon immeuble à Keur Massar depuis deux ans. Les loyers arrivent à date fixe et je reçois un rapport clair chaque mois. »</blockquote>
+      <figcaption style="display:flex;align-items:center;gap:13px">
+        <image-slot id="gl-avis" style="width:48px;height:48px;flex-shrink:0" shape="circle" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?fm=jpg&q=70&w=300&auto=format&fit=crop" credit="Photo par Vicky Hladynets sur Unsplash" credit-href="https://unsplash.com/@vhladynets" placeholder="Photo"></image-slot>
+        <span style="font-family:Manrope,sans-serif;font-size:14.5px;font-weight:700;line-height:1.35">Ousmane F.<br /><span style="font-weight:500;font-size:13px;color:#6A7480">Propriétaire bailleur, Dakar</span></span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="mandat" style="background:#F5F5F5;margin-top:80px;padding:70px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:start">
+    <div>
+      <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Mise en gestion</span>
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Confiez-nous votre bien</h2>
+      <p style="margin:14px 0 0;color:#5B6572;font-size:16px;max-width:46ch;text-wrap:pretty">Décrivez votre bien : nous vous envoyons une proposition de mandat détaillée, honoraires et prestations inclus, sous 72h.</p>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:20px;padding:30px;box-shadow:0 20px 50px rgba(6,38,79,.1);display:flex;flex-direction:column;gap:18px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Type de bien</span>
+          <select required="" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+            <option value="">Choisir…</option>
+            <option>Appartement</option>
+            <option>Maison</option>
+            <option>Villa</option>
+            <option>Immeuble</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Nombre de lots</span>
+          <input type="number" min="1" placeholder="1" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Localisation du bien</span>
+        <input type="text" required="" placeholder="Quartier, ville" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Vous résidez</span>
+        <select style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+          <option>Au Sénégal</option>
+          <option>En Europe</option>
+          <option>En Amérique du Nord</option>
+          <option>Ailleurs</option>
+        </select>
+      </label>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Nom complet</span>
+          <input type="text" required="" placeholder="Ousmane Fall" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Téléphone / WhatsApp</span>
+          <input type="tel" required="" placeholder="+221 77 000 00 00" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Précisions</span>
+        <textarea rows="3" placeholder="Bien déjà loué ? Travaux en cours ? Attentes particulières ?" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none;resize:vertical;font-family:inherit" style-focus="border-color:#0A4D9B"></textarea>
+      </label>
+      <button type="submit" style="border:0;cursor:pointer;background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:17px;border-radius:12px;box-shadow:0 12px 26px rgba(245,124,0,.26)" style-hover="background:#0A4D9B">Recevoir une proposition de mandat</button>
+      <sc-if value="{{ sent }}">
+        <p style="margin:0;background:#F5F5F5;border-radius:10px;padding:14px;font-size:14px;color:#0A4D9B;font-weight:600">Merci ! Votre demande de mandat est enregistrée, réponse sous 72h.</p>
+      </sc-if>
+    </form>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return { sent: this.state.sent, onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); } };
+  }
+}
+</script>
+</body>
+</html>

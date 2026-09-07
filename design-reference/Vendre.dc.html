@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #FFFFFF; color: #222222; font-family: "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #0A4D9B; text-decoration: none; }
+  a:hover { color: #F57C00; }
+  input, select, button, textarea { font: inherit; color: inherit; }
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+<dc-import name="SiteHeader" hint-size="100%,140px"></dc-import>
+
+<section style="background:#0A4D9B;padding:52px 0 64px;color:#FFFFFF">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <nav style="font-size:13.5px;color:rgba(255,255,255,.72);display:flex;gap:8px;align-items:center">
+      <a href="Accueil NORO Immo.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Accueil</a><span>/</span><span style="color:#FFFFFF">Vendre</span>
+    </nav>
+    <h1 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0;max-width:22ch">Faites estimer votre bien gratuitement</h1>
+    <p style="margin:14px 0 0;color:rgba(255,255,255,.85);font-size:17px;max-width:58ch;text-wrap:pretty">Terrain, maison, villa, appartement ou immeuble : nous évaluons votre bien au prix réel du marché de votre quartier et vous remettons une estimation écrite sous 48h.</p>
+  </div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:70px 24px 0">
+  <div style="max-width:58ch">
+    <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Comment ça se passe</span>
+    <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,40px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Le processus d'estimation NORO</h2>
+  </div>
+  <div style="margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">1</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Vous nous décrivez le bien</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Le formulaire ci-dessous suffit : type, quartier, superficie et documents disponibles.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">2</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Visite sur place</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Un conseiller se rend sur le bien sous 72h, mesure, photographie et vérifie le titre.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">3</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Évaluation chiffrée</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Prix au m² du quartier, comparables vendus, fourchette basse et haute, délai estimé.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">4</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Offre sous 48h</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Estimation écrite + proposition de mandat, sans engagement de votre part.</p>
+    </div>
+  </div>
+</section>
+
+<section id="formulaire" style="background:#F5F5F5;margin-top:80px;padding:70px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:start">
+    <div>
+      <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Demande d'estimation</span>
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Parlez-nous de votre bien</h2>
+      <p style="margin:14px 0 0;color:#5B6572;font-size:16px;max-width:46ch;text-wrap:pretty">Estimation gratuite et sans engagement. Vos informations restent confidentielles et ne sont jamais transmises à des tiers.</p>
+      <ul style="margin:26px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:11px;font-size:15px"><span style="color:#F57C00;font-weight:700">✓</span> Réponse écrite sous 48h ouvrées</li>
+        <li style="display:flex;gap:11px;font-size:15px"><span style="color:#F57C00;font-weight:700">✓</span> Vérification du titre foncier incluse</li>
+        <li style="display:flex;gap:11px;font-size:15px"><span style="color:#F57C00;font-weight:700">✓</span> Possible depuis l'étranger, par procuration</li>
+      </ul>
+      <div style="margin-top:28px;background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:22px">
+        <p style="margin:0;font-size:14.5px;color:#5B6572">Vous préférez parler à quelqu'un ?</p>
+        <a href="https://wa.me/221770000000" style="display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:#25D366;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:15px;padding:14px 22px;border-radius:999px" style-hover="background:#0A4D9B">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-4-2.4 10 10 0 0 1-2-3c-.2-.6-.3-1.3 0-1.8.2-.4.6-.8 1-1 .3-.1.7 0 .9.3l.8 1.4c.1.3 0 .5-.1.7l-.4.5c-.1.2-.2.4 0 .6.5.9 1.5 1.9 2.5 2.4.2.1.4 0 .6-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.8c.2.1.3.4.3.6 0 .1 0 .2-.1.3Z"/></svg>
+          WhatsApp 77 000 00 00
+        </a>
+      </div>
+    </div>
+
+    <form onSubmit="{{ onSubmit }}" style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:20px;padding:30px;box-shadow:0 20px 50px rgba(6,38,79,.1);display:flex;flex-direction:column;gap:18px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Type de bien</span>
+          <select required="" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+            <option value="">Choisir…</option>
+            <option>Terrain</option>
+            <option>Maison</option>
+            <option>Villa</option>
+            <option>Appartement</option>
+            <option>Immeuble</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Superficie (m²)</span>
+          <input type="number" min="1" required="" placeholder="300" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Localisation</span>
+        <input type="text" required="" placeholder="Quartier, ville (ex. Sacré-Cœur 3, Dakar)" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+      </label>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Documents disponibles</span>
+        <select style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+          <option>Titre foncier</option>
+          <option>Bail</option>
+          <option>Délibération</option>
+          <option>Acte de vente</option>
+          <option>Je ne sais pas</option>
+        </select>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Description du bien</span>
+        <textarea rows="4" placeholder="Nombre de chambres, état, année de construction, particularités…" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none;resize:vertical;font-family:inherit" style-focus="border-color:#0A4D9B"></textarea>
+      </label>
+      <div style="height:1px;background:#F1F2F4"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Nom complet</span>
+          <input type="text" required="" placeholder="Aminata Diop" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Téléphone / WhatsApp</span>
+          <input type="tel" required="" placeholder="+221 77 000 00 00" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">E-mail</span>
+        <input type="email" required="" placeholder="vous@email.com" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+      </label>
+      <button type="submit" style="border:0;cursor:pointer;background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:17px;border-radius:12px;box-shadow:0 12px 26px rgba(245,124,0,.26)" style-hover="background:#0A4D9B">Demander mon estimation gratuite</button>
+      <sc-if value="{{ sent }}">
+        <p style="margin:0;background:#F5F5F5;border-radius:10px;padding:14px;font-size:14px;color:#0A4D9B;font-weight:600">Demande enregistrée. Un conseiller NORO vous contacte sous 48h ouvrées.</p>
+      </sc-if>
+      <p style="margin:0;font-size:12.5px;color:#8A929C">En envoyant ce formulaire, vous acceptez d'être contacté par NORO Immobilier au sujet de votre bien.</p>
+    </form>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>

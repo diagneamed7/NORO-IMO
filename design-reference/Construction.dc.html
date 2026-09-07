@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #FFFFFF; color: #222222; font-family: "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #0A4D9B; text-decoration: none; }
+  a:hover { color: #F57C00; }
+  input, select, button, textarea { font: inherit; color: inherit; }
+</style>
+</helmet>
+
+<div style="width:100%;overflow-x:hidden">
+<dc-import name="SiteHeader" hint-size="100%,140px"></dc-import>
+
+<section style="position:relative;min-height:420px;display:flex;align-items:flex-end;isolation:isolate">
+  <div style="position:absolute;inset:0;overflow:hidden;z-index:0">
+    <image-slot id="cs-hero" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="https://images.unsplash.com/photo-1601622962666-d0b6d43a7ac7?fm=jpg&q=70&w=1800&auto=format&fit=crop" credit="Photo par Harry Dona sur Unsplash" credit-href="https://unsplash.com/@harrydona" placeholder="Maison en construction"></image-slot>
+  </div>
+  <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(105deg,rgba(6,38,79,.94) 0%,rgba(10,77,155,.84) 50%,rgba(10,77,155,.45) 100%)"></div>
+  <div style="position:relative;z-index:2;max-width:1280px;width:100%;margin:0 auto;padding:70px 24px 56px;color:#FFFFFF">
+    <nav style="font-size:13.5px;color:rgba(255,255,255,.72);display:flex;gap:8px;align-items:center">
+      <a href="Accueil NORO Immo.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Accueil</a><span>/</span><span style="color:#FFFFFF">Construction</span>
+    </nav>
+    <h1 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(30px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0;max-width:22ch">Du plan à la remise des clés</h1>
+    <p style="margin:14px 0 0;color:rgba(255,255,255,.86);font-size:17px;max-width:56ch;text-wrap:pretty">Plans architecturaux, devis détaillé, chantier suivi semaine après semaine. Un seul contrat, un seul interlocuteur, un budget tenu.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px">
+      <a href="#devis" style="background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:16px 30px;border-radius:999px" style-hover="background:#FFFFFF;color:#0A4D9B">Demander un devis</a>
+      <a href="#realisations" style="border:1.5px solid rgba(255,255,255,.7);color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:15px 28px;border-radius:999px" style-hover="background:#FFFFFF;color:#0A4D9B">Voir nos réalisations</a>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1280px;margin:0 auto;padding:76px 24px 0">
+  <div style="max-width:58ch">
+    <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Méthode NORO</span>
+    <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,40px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Les étapes de votre projet</h2>
+    <p style="margin:14px 0 0;color:#5B6572;font-size:16px;text-wrap:pretty">Chaque étape est validée par écrit avant de passer à la suivante — vous gardez la main sur le budget et le calendrier.</p>
+  </div>
+  <div style="margin-top:38px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px">
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">1</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Étude du terrain</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Vérification du titre, des bornes et de la nature du sol avant tout engagement.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">2</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Plans architecturaux</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Plans sur mesure, rendus 3D et dépôt du permis de construire.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">3</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Devis détaillé</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Poste par poste, matériaux chiffrés, échéancier de paiement par phase.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#F57C00;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">4</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Suivi de chantier</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Rapport photo hebdomadaire, visites vidéo, contrôle qualité à chaque phase.</p>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:14px;padding:26px">
+      <span style="width:48px;height:48px;border-radius:13px;background:#0A4D9B;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-weight:800;font-size:19px">5</span>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17.5px;margin:18px 0 0">Livraison</h3>
+      <p style="margin:9px 0 0;color:#6A7480;font-size:14px;line-height:1.6">Réception avec réserves levées, garantie d'un an sur le gros œuvre.</p>
+    </div>
+  </div>
+</section>
+
+<section id="realisations" style="background:#F5F5F5;margin-top:80px;padding:70px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div style="max-width:58ch">
+      <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Chantiers livrés</span>
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Nos réalisations</h2>
+    </div>
+    <div style="margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
+      <figure style="margin:0;background:#FFFFFF;border:1px solid #ECECEC;border-radius:16px;overflow:hidden">
+        <div style="position:relative;height:220px;overflow:hidden">
+          <image-slot id="cs-real-1" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?fm=jpg&q=70&w=1200&auto=format&fit=crop" credit="Photo par Dillon Kydd sur Unsplash" credit-href="https://unsplash.com/@kyddvisuals" placeholder="Villa livrée"></image-slot>
+        </div>
+        <figcaption style="padding:20px">
+          <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17px;margin:0">Villa 4 chambres — Saly</h3>
+          <p style="margin:8px 0 0;color:#6A7480;font-size:14px;line-height:1.6">320 m² bâtis, piscine, livrée en 11 mois. Clé en main pour un client basé à Milan.</p>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;background:#FFFFFF;border:1px solid #ECECEC;border-radius:16px;overflow:hidden">
+        <div style="position:relative;height:220px;overflow:hidden">
+          <image-slot id="cs-real-2" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?fm=jpg&q=70&w=1200&auto=format&fit=crop" credit="Photo par Ronnie George sur Unsplash" credit-href="https://unsplash.com/@realestateron" placeholder="Maison livrée"></image-slot>
+        </div>
+        <figcaption style="padding:20px">
+          <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17px;margin:0">Maison R+1 — Bambilor</h3>
+          <p style="margin:8px 0 0;color:#6A7480;font-size:14px;line-height:1.6">260 m², 4 chambres, budget tenu à 2 % près. Financement échelonné sur 24 mois.</p>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;background:#FFFFFF;border:1px solid #ECECEC;border-radius:16px;overflow:hidden">
+        <div style="position:relative;height:220px;overflow:hidden">
+          <image-slot id="cs-real-3" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?fm=jpg&q=70&w=1200&auto=format&fit=crop" credit="Photo par Joel Filipe sur Unsplash" credit-href="https://unsplash.com/@joelfilip" placeholder="Immeuble livré"></image-slot>
+        </div>
+        <figcaption style="padding:20px">
+          <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:17px;margin:0">Immeuble R+2 — Keur Massar</h3>
+          <p style="margin:8px 0 0;color:#6A7480;font-size:14px;line-height:1.6">6 appartements pour investissement locatif, mis en gestion dès la livraison.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="devis" style="max-width:1280px;margin:0 auto;padding:76px 24px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:start">
+    <div>
+      <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#F57C00">Devis gratuit</span>
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.12;letter-spacing:-.02em;margin:12px 0 0">Chiffrons votre projet</h2>
+      <p style="margin:14px 0 0;color:#5B6572;font-size:16px;max-width:46ch;text-wrap:pretty">Donnez-nous les grandes lignes : nous revenons avec une fourchette de budget et un calendrier réaliste, gratuitement.</p>
+      <div style="margin-top:26px;background:#F5F5F5;border-radius:14px;padding:24px">
+        <p style="margin:0;font-family:Manrope,sans-serif;font-weight:700;font-size:15px">Repères de budget</p>
+        <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14.5px;color:#5B6572">
+          <li>Gros œuvre : à partir de 120 000 FCFA / m²</li>
+          <li>Clé en main standard : 210 000 – 280 000 FCFA / m²</li>
+          <li>Clé en main haut de gamme : à partir de 350 000 FCFA / m²</li>
+        </ul>
+      </div>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="background:#FFFFFF;border:1px solid #ECECEC;border-radius:20px;padding:30px;box-shadow:0 20px 50px rgba(6,38,79,.1);display:flex;flex-direction:column;gap:18px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Type de projet</span>
+          <select required="" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+            <option value="">Choisir…</option>
+            <option>Maison individuelle</option>
+            <option>Villa</option>
+            <option>Immeuble</option>
+            <option>Extension / rénovation</option>
+            <option>Plans seuls</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Surface visée (m²)</span>
+          <input type="number" min="20" placeholder="250" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Où se situe le terrain ?</span>
+        <input type="text" required="" placeholder="Quartier, ville" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+      </label>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Terrain déjà acquis ?</span>
+          <select style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+            <option>Oui</option>
+            <option>Non, à trouver avec NORO</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Démarrage souhaité</span>
+          <select style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;background:#FFFFFF;cursor:pointer">
+            <option>Dès que possible</option>
+            <option>Dans 3 à 6 mois</option>
+            <option>Dans plus de 6 mois</option>
+          </select>
+        </label>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px">
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Nom complet</span>
+          <input type="text" required="" placeholder="Cheikh Ndiaye" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px">
+          <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Téléphone / WhatsApp</span>
+          <input type="tel" required="" placeholder="+221 77 000 00 00" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none" style-focus="border-color:#0A4D9B" />
+        </label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:#0A4D9B">Votre projet en quelques mots</span>
+        <textarea rows="3" placeholder="Nombre de chambres, étages, finitions souhaitées…" style="border:1.5px solid #DCE3EC;border-radius:10px;padding:13px;font-size:15px;outline:none;resize:vertical;font-family:inherit" style-focus="border-color:#0A4D9B"></textarea>
+      </label>
+      <button type="submit" style="border:0;cursor:pointer;background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:17px;border-radius:12px;box-shadow:0 12px 26px rgba(245,124,0,.26)" style-hover="background:#0A4D9B">Recevoir mon devis</button>
+      <sc-if value="{{ sent }}">
+        <p style="margin:0;background:#F5F5F5;border-radius:10px;padding:14px;font-size:14px;color:#0A4D9B;font-weight:600">Demande reçue. Notre bureau d'études vous rappelle sous 72h.</p>
+      </sc-if>
+    </form>
+  </div>
+</section>
+
+<section style="margin-top:80px;background:#0A4D9B;padding:64px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px">
+    <div style="flex:1 1 420px">
+      <h2 style="font-family:Manrope,sans-serif;font-weight:800;color:#FFFFFF;font-size:clamp(24px,3vw,36px);line-height:1.15;margin:0;text-wrap:balance">Pas encore de terrain pour construire ?</h2>
+      <p style="color:rgba(255,255,255,.82);font-size:16.5px;margin:12px 0 0;max-width:52ch">Nos lotissements sont viabilisés, sous titre foncier, avec paiement échelonné possible.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px">
+      <a href="Programmes.dc.html" style="background:#F57C00;color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:17px 28px;border-radius:999px" style-hover="background:#FFFFFF;color:#0A4D9B">Voir les programmes</a>
+      <a href="Acheter.dc.html" style="border:1.5px solid rgba(255,255,255,.7);color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:16px;padding:16px 26px;border-radius:999px" style-hover="background:#FFFFFF;color:#0A4D9B">Terrains disponibles</a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,520px"></dc-import>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false };
+  renderVals() {
+    return { sent: this.state.sent, onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); } };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,16 +1,16 @@
 {
-  "titre_annonce": "Terrain - Yène Kao",
+  "titre_annonce": "Terrain - Y\u00e8ne Kao",
   "type": "Terrain",
-  "zone": "Yène Kao",
+  "zone": "Y\u00e8ne Kao",
   "superficie": 180,
   "prix": 4500000,
-  "titre_foncier": "Délibération",
+  "titre_foncier": "D\u00e9lib\u00e9ration",
   "statut": "disponible",
-  "description": "Situé à 8 km de l'AIBD, à 2,5 km de la mer et de la route principale, à 1,5 km du stade de Yène, et 500 m des habitations.",
+  "description": "Situ\u00e9 \u00e0 8 km de l'AIBD, \u00e0 2,5 km de la mer et de la route principale, \u00e0 1,5 km du stade de Y\u00e8ne, et 500 m des habitations.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1506695041619-5dd4f46960b7?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }

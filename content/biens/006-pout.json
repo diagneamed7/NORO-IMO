@@ -4,13 +4,13 @@
   "zone": "Pout",
   "superficie": 210,
   "prix": 4000000,
-  "titre_foncier": "Délibération",
+  "titre_foncier": "D\u00e9lib\u00e9ration",
   "statut": "disponible",
-  "description": "Zone résidentielle avec eau et électricité, située à 2 km de la route et à 5 km de l'AIBD.",
+  "description": "Zone r\u00e9sidentielle avec eau et \u00e9lectricit\u00e9, situ\u00e9e \u00e0 2 km de la route et \u00e0 5 km de l'AIBD.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1586859821397-c81e4971ca82?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }

@@ -1,0 +1,23 @@
+[
+  {
+    "nom": "Aminata D.",
+    "role": "Diaspora, Paris",
+    "note": 5,
+    "avis": "« J'ai acheté mon terrain à Diamniadio depuis Paris. Visite en visio, documents vérifiés, virement sécurisé : tout s'est fait en six semaines, sans un seul déplacement. »",
+    "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=jpg&q=70&w=300&auto=format&fit=crop"
+  },
+  {
+    "nom": "Fatou & Cheikh N.",
+    "role": "Construction, Saly",
+    "note": 5,
+    "avis": "« Plans, devis, chantier : l'équipe a construit notre villa à Saly en respectant le budget annoncé. Le suivi photo hebdomadaire nous a rassurés. »",
+    "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?fm=jpg&q=70&w=300&auto=format&fit=crop"
+  },
+  {
+    "nom": "Ousmane F.",
+    "role": "Propriétaire bailleur, Dakar",
+    "note": 5,
+    "avis": "« NORO gère mon immeuble à Keur Massar depuis deux ans. Les loyers arrivent à date fixe et je reçois un rapport clair chaque mois. »",
+    "photo": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?fm=jpg&q=70&w=300&auto=format&fit=crop"
+  }
+]

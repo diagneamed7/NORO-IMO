@@ -1,0 +1,41 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #0A4D9B;
+  --color-primary-dark: #0A4D9B;
+  --color-accent: #F57C00;
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-black: #222222;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #ECECEC;
+  --color-gray-500: rgba(255, 255, 255, 0.78);
+  --color-gray-700: rgba(255, 255, 255, 0.85);
+  
+  /* Typography */
+  --font-primary: 'Manrope', sans-serif;
+  --font-secondary: 'IBM Plex Sans', sans-serif;
+  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 999px;
+  
+  /* Max Width */
+  --max-width: 1280px;
+}

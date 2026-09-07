@@ -24,6 +24,14 @@ collections:
         name: "type"
         widget: "select"
         options: ["Terrain", "Maison", "Villa", "Appartement", "Bureau", "Immeuble", "Local commercial"]
+      - label: "Type de transaction"
+        name: "transaction"
+        widget: "select"
+        options:
+          - { label: "Vente", value: "Vente" }
+          - { label: "Location", value: "Location" }
+          - { label: "Vente avec moratoire", value: "Moratoire" }
+        default: "Vente"
       - { label: "Zone / Localisation", name: "zone", widget: "string" }
       - { label: "Superficie (m2)", name: "superficie", widget: "number", required: false }
       - { label: "Prix (FCFA)", name: "prix", widget: "number", required: false }
@@ -43,3 +51,19 @@ collections:
       - { label: "Acompte (FCFA)", name: "moratoire_acompte", widget: "number", required: false }
       - { label: "Mensualité (FCFA)", name: "moratoire_mensualite", widget: "number", required: false }
       - { label: "Durée (mois)", name: "moratoire_duree", widget: "number", required: false }
+
+  - name: "temoignages"
+    label: "Témoignages clients"
+    label_singular: "Témoignage"
+    folder: "content/temoignages"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    summary: "{{nom}} - {{role}}"
+    fields:
+      - { label: "Nom du client", name: "nom", widget: "string" }
+      - { label: "Rôle / Localisation", name: "role", widget: "string" }
+      - { label: "Note (étoiles)", name: "note", widget: "number", min: 1, max: 5, default: 5 }
+      - { label: "Avis", name: "avis", widget: "text" }
+      - { label: "Photo (optionnelle)", name: "photo", widget: "image", required: false }

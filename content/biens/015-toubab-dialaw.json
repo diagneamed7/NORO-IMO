@@ -4,13 +4,13 @@
   "zone": "Toubab Dialaw",
   "superficie": 600,
   "prix": 35000000,
-  "titre_foncier": "Délibération",
+  "titre_foncier": "D\u00e9lib\u00e9ration",
   "statut": "disponible",
-  "description": "Position angle, situé à 4 mn de la route principale, à 100 m du Centre Foot Bokandé. Terrain bien situé, accessible, avec eau et électricité.",
+  "description": "Position angle, situ\u00e9 \u00e0 4 mn de la route principale, \u00e0 100 m du Centre Foot Bokand\u00e9. Terrain bien situ\u00e9, accessible, avec eau et \u00e9lectricit\u00e9.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1747854805840-9be7d5e360e6?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }

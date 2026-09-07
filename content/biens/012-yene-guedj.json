@@ -1,16 +1,16 @@
 {
-  "titre_annonce": "Terrain - Yène Guedj",
+  "titre_annonce": "Terrain - Y\u00e8ne Guedj",
   "type": "Terrain",
-  "zone": "Yène Guedj",
+  "zone": "Y\u00e8ne Guedj",
   "superficie": 300,
   "prix": 7500000,
-  "titre_foncier": "Délibération",
+  "titre_foncier": "D\u00e9lib\u00e9ration",
   "statut": "disponible",
-  "description": "Première position sur la route, accessible, bien situé et idéal pour habitation ou investissement.",
+  "description": "Premi\u00e8re position sur la route, accessible, bien situ\u00e9 et id\u00e9al pour habitation ou investissement.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1461175827210-5ceac3e39dd2?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }

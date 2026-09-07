@@ -1,0 +1,360 @@
+.page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* === HERO SECTION === */
+.heroSection {
+  background: var(--color-primary);
+  padding: 52px 0 64px;
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.breadcrumb {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 22ch;
+}
+
+.description {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 17px;
+  max-width: 58ch;
+  text-wrap: pretty;
+}
+
+/* === PROCESS SECTION === */
+.processSection {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 24px 0;
+}
+
+.processHeader {
+  max-width: 58ch;
+  margin-bottom: 36px;
+}
+
+.sectionLabel {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.sectionTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 12px 0 0;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.step {
+  background: var(--color-white);
+  border: 1px solid #ECECEC;
+  border-radius: 14px;
+  padding: 26px;
+}
+
+.stepNumber {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.stepTitle {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 17.5px;
+  margin: 18px 0 0;
+  color: var(--color-black);
+}
+
+.stepText {
+  margin: 9px 0 0;
+  color: #6A7480;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* === FORM SECTION === */
+.formSection {
+  background: #F5F5F5;
+  margin-top: 80px;
+  padding: 70px 0;
+}
+
+.formWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.formInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.formDescription {
+  margin: 14px 0 0;
+  color: #5B6572;
+  font-size: 16px;
+  max-width: 46ch;
+  text-wrap: pretty;
+}
+
+.benefitsList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefitsList li {
+  display: flex;
+  gap: 11px;
+  font-size: 15px;
+  color: var(--color-black);
+}
+
+.checkmark {
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.whatsappBox {
+  background: var(--color-white);
+  border: 1px solid #ECECEC;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.whatsappText {
+  margin: 0;
+  font-size: 14.5px;
+  color: #5B6572;
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  background: #25D366;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.whatsappButton:hover {
+  background: var(--color-primary);
+}
+
+/* === FORM === */
+.form {
+  background: var(--color-white);
+  border: 1px solid #ECECEC;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 50px rgba(6, 38, 79, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formLabel span {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.formLabel input,
+.formLabel select,
+.formLabel textarea {
+  border: 1.5px solid #DCE3EC;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  background: var(--color-white);
+}
+
+.formLabel input:focus,
+.formLabel select:focus,
+.formLabel textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.formLabel select {
+  cursor: pointer;
+}
+
+.formLabel textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.formDivider {
+  height: 1px;
+  background: #F1F2F4;
+  margin: 0;
+}
+
+.submitButton {
+  border: 0;
+  cursor: pointer;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 17px;
+  border-radius: 12px;
+  box-shadow: 0 12px 26px rgba(245, 124, 0, 0.26);
+  transition: background 0.2s;
+}
+
+.submitButton:hover {
+  background: var(--color-primary);
+}
+
+.successMessage {
+  margin: 0;
+  background: #F5F5F5;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 12.5px;
+  color: #8A929C;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .formWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .heroSection {
+    padding: 40px 0 52px;
+  }
+
+  .processSection {
+    padding: 50px 24px 0;
+  }
+
+  .formSection {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .formLabel {
+    gap: 5px;
+  }
+
+  .formLabel input,
+  .formLabel select,
+  .formLabel textarea {
+    padding: 12px;
+  }
+}

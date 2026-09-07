@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+</helmet>
+
+<footer style="background:#222222;color:rgba(255,255,255,.72);padding:64px 0 0;font-family:'IBM Plex Sans',system-ui,sans-serif">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px">
+    <div>
+      <div style="background:#FFFFFF;border-radius:14px;padding:14px 18px;display:inline-block">
+        <image-slot id="noro-logo-footer" style="width:150px;height:148px" shape="rect" fit="contain" src="./noro-logo-full.png" placeholder="Logo NORO IMMO"></image-slot>
+      </div>
+      <p style="margin:18px 0 0;font-size:14.5px;line-height:1.7;max-width:34ch">Avec NORO Immo, l'avenir s'habite. Agence immobilière au Sénégal : vente, location, construction et gestion locative.</p>
+    </div>
+    <div>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;margin:0 0 16px">Liens rapides</h3>
+      <nav style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
+        <a href="Acheter.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Acheter un bien</a>
+        <a href="Louer.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Louer un bien</a>
+        <a href="Vendre.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Estimer mon bien</a>
+        <a href="Gestion-locative.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Gestion locative</a>
+        <a href="Construction.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Construction</a>
+        <a href="Programmes.dc.html" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">Nos programmes</a>
+      </nav>
+    </div>
+    <div>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;margin:0 0 16px">Contact</h3>
+      <div style="display:flex;flex-direction:column;gap:11px;font-size:14.5px">
+        <span>Sacré-Cœur 3, Dakar — Sénégal</span>
+        <a href="tel:+221338000000" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">+221 33 800 00 00</a>
+        <a href="https://wa.me/221770000000" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">WhatsApp : +221 77 000 00 00</a>
+        <a href="mailto:contact@noroimmo.sn" style="color:rgba(255,255,255,.72)" style-hover="color:#F57C00">contact@noroimmo.sn</a>
+        <span>Lun – Sam : 8h30 – 19h</span>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:Manrope,sans-serif;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;margin:0 0 16px">Suivez-nous</h3>
+      <div style="display:flex;gap:10px">
+        <a href="#" aria-label="Facebook" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="background:#0A4D9B"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.5l.5-3H13v-2c0-.6.4-1 1-1Z"/></svg></a>
+        <a href="#" aria-label="Instagram" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="background:#0A4D9B"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="TikTok" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="background:#0A4D9B"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3h-3v11.2a2.3 2.3 0 1 1-2.3-2.3c.2 0 .5 0 .7.1V9a5.3 5.3 0 1 0 4.6 5.2V8.6c1 .7 2.1 1.1 3.4 1.2V6.9a3.9 3.9 0 0 1-3.4-3.9Z"/></svg></a>
+        <a href="#" aria-label="YouTube" style="width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="background:#0A4D9B"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8c.2.9.9 1.6 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg></a>
+      </div>
+      <a href="Vendre.dc.html" style="display:inline-block;margin-top:20px;border:1.5px solid rgba(255,255,255,.28);color:#FFFFFF;font-family:Manrope,sans-serif;font-weight:700;font-size:14px;padding:13px 22px;border-radius:999px" style-hover="background:#F57C00;border-color:#F57C00">Demander un devis</a>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:48px auto 0;padding:22px 24px 30px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;font-size:13px">
+    <span>© 2026 NORO Immobilier — Tous droits réservés</span>
+    <div style="flex:1"></div>
+    <a href="Mentions-legales.dc.html" style="color:rgba(255,255,255,.6)" style-hover="color:#F57C00">Mentions légales</a>
+    <a href="Confidentialite.dc.html" style="color:rgba(255,255,255,.6)" style-hover="color:#F57C00">Politique de confidentialité</a>
+    <a href="CGU.dc.html" style="color:rgba(255,255,255,.6)" style-hover="color:#F57C00">Conditions d'utilisation</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/221770000000" aria-label="Discuter sur WhatsApp" style="position:fixed;bottom:26px;right:26px;z-index:90;width:60px;height:60px;border-radius:50%;background:#25D366;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.24)" style-hover="background:#0A4D9B">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-4-2.4 10 10 0 0 1-2-3c-.2-.6-.3-1.3 0-1.8.2-.4.6-.8 1-1 .3-.1.7 0 .9.3l.8 1.4c.1.3 0 .5-.1.7l-.4.5c-.1.2-.2.4 0 .6.5.9 1.5 1.9 2.5 2.4.2.1.4 0 .6-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.8c.2.1.3.4.3.6 0 .1 0 .2-.1.3Z"/></svg>
+</a>
+
+</x-dc>
+</body>
+</html>

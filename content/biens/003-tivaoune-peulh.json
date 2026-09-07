@@ -6,11 +6,11 @@
   "prix": 12000000,
   "titre_foncier": "Titre Foncier Global",
   "statut": "disponible",
-  "description": "Situé à Socabeg, à 3 km de la VDN 3 et de la mer, à 450 m du marché Socabeg, à 950 m de la Gendarmerie. Zone déjà habitée avec eau et électricité.",
+  "description": "Situ\u00e9 \u00e0 Socabeg, \u00e0 3 km de la VDN 3 et de la mer, \u00e0 450 m du march\u00e9 Socabeg, \u00e0 950 m de la Gendarmerie. Zone d\u00e9j\u00e0 habit\u00e9e avec eau et \u00e9lectricit\u00e9.",
   "moratoire_disponible": false,
   "moratoire_prix": null,
   "moratoire_acompte": null,
   "moratoire_mensualite": null,
   "moratoire_duree": null,
-  "photo": ""
+  "photo": "https://images.unsplash.com/photo-1747854805840-9be7d5e360e6?fm=jpg&q=70&w=800&auto=format&fit=crop"
 }
