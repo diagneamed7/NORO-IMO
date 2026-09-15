@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './SiteHeader.module.css'
 
-export default function SiteHeader() {
+export default function SiteHeader({ openContact }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -78,9 +78,16 @@ export default function SiteHeader() {
               </svg>
             </a>
 
-            <Link to="/vendre" className={styles.quoteBtn}>
+            <a
+              href="#"
+              className={styles.quoteBtn}
+              onClick={(e) => {
+                e.preventDefault()
+                openContact('devis')
+              }}
+            >
               Demander un devis
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -111,9 +118,16 @@ export default function SiteHeader() {
                 <Link to="/contact">Contact</Link>
               </nav>
 
-              <Link to="/contact" className={styles.cta}>
+              <a
+                href="#"
+                className={styles.cta}
+                onClick={(e) => {
+                  e.preventDefault()
+                  openContact('rdv')
+                }}
+              >
                 Prendre rendez-vous
-              </Link>
+              </a>
             </>
           )}
 
@@ -139,9 +153,16 @@ export default function SiteHeader() {
             <Link to="/construction">Construction</Link>
             <Link to="/programmes">Programmes</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/contact" className={styles.mobileCta}>
+            <a
+              href="#"
+              className={styles.mobileCta}
+              onClick={(e) => {
+                e.preventDefault()
+                openContact('rdv')
+              }}
+            >
               Prendre rendez-vous
-            </Link>
+            </a>
           </nav>
         )}
       </header>

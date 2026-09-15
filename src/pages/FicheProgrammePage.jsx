@@ -42,8 +42,8 @@ export default function FicheProgrammePage() {
   const moratoireMsg = prixCash ? Math.round((prixCash - acompte) / moratoireMois) : null
 
   // SEO dynamique pour le programme
-  const seoTitle = `${programme.titre} | Programmes Immobiliers | NORO Immobilier`
-  const seoDesc = `${programme.titre}. ${programme.localisation ? programme.localisation + '. ' : ''}Découvrez notre programme immobilier avec plans, prix et conditions de paiement.`
+  const seoTitle = `${programme.nom} | Programmes Immobiliers | NORO Immobilier`
+  const seoDesc = `${programme.nom}. ${programme.localisation ? programme.localisation + '. ' : ''}Découvrez notre programme immobilier avec plans, prix et conditions de paiement.`
 
   return (
     <>

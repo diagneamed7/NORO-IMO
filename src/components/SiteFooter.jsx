@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './SiteFooter.module.css'
 
-export default function SiteFooter() {
+export default function SiteFooter({ openContact }) {
   return (
     <>
       <footer className={styles.footer}>
@@ -69,9 +69,16 @@ export default function SiteFooter() {
               </a>
             </div>
 
-            <Link to="/vendre" className={styles.quoteBtn}>
+            <a
+              href="#"
+              className={styles.quoteBtn}
+              onClick={(e) => {
+                e.preventDefault()
+                openContact('devis')
+              }}
+            >
               Demander un devis
-            </Link>
+            </a>
           </div>
         </div>
 
