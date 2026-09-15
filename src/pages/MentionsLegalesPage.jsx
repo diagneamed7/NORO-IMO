@@ -71,13 +71,13 @@ export default function MentionsLegalesPage() {
               <div className={styles.editorTableRow}>
                 <div className={styles.editorTableLabel}>Téléphone</div>
                 <div className={styles.editorTableValue}>
-                  <a href="tel:+221770000000">+221 77 000 00 00</a>
+                  <a href="tel:+221770000000">+221 +221 77 792 39 06</a>
                 </div>
               </div>
               <div className={styles.editorTableRow}>
                 <div className={styles.editorTableLabel}>E-mail</div>
                 <div className={styles.editorTableValue}>
-                  <a href="mailto:contact@noro-immobilier.sn">contact@noro-immobilier.sn</a>
+                  <a href="mailto:immonoro@gmail.com">immonoro@gmail.com</a>
                 </div>
               </div>
               <div className={styles.editorTableRow}>
@@ -128,7 +128,7 @@ export default function MentionsLegalesPage() {
             </nav>
             <div className={styles.tocDivider}></div>
             <p className={styles.tocQuestion}>Une question sur ces mentions ?</p>
-            <a href="mailto:contact@noro-immobilier.sn" className={styles.tocCta}>
+            <a href="mailto:immonoro@gmail.com" className={styles.tocCta}>
               Nous écrire →
             </a>
           </aside>

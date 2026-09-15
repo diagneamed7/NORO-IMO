@@ -39,7 +39,7 @@ Téléphone: ${formData.telephone}
 
     // Send to WhatsApp
     const encodedMessage = encodeURIComponent(message)
-    window.open(`https://wa.me/221770000000?text=${encodedMessage}`, '_blank')
+    window.open(`https://wa.me/221777923906?text=${encodedMessage}`, '_blank')
 
     setSent(true)
     setTimeout(() => {
@@ -300,7 +300,7 @@ Téléphone: ${formData.telephone}
                     name="telephone"
                     value={formData.telephone}
                     onChange={handleChange}
-                    placeholder="+221 77 000 00 00"
+                    placeholder="+221 +221 77 792 39 06"
                     required
                   />
                 </label>

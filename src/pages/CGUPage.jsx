@@ -84,7 +84,7 @@ export default function CGUPage() {
             {/* Contact */}
             <h2 id="contact" className={styles.sectionTitle}>Contact</h2>
             <p className={styles.sectionText}>
-              Pour toute question relative aux présentes conditions : <a href="mailto:contact@noro-immobilier.sn">contact@noro-immobilier.sn</a>
+              Pour toute question relative aux présentes conditions : <a href="mailto:immonoro@gmail.com">immonoro@gmail.com</a>
             </p>
 
             {/* Footer Links */}

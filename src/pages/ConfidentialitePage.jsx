@@ -84,8 +84,8 @@ export default function ConfidentialitePage() {
             <div className={styles.ctaBox}>
               <p>Exercer vos droits</p>
               <p>Écrivez-nous en précisant votre demande : nous vous répondons sous 30 jours.</p>
-              <a href="mailto:contact@noro-immobilier.sn" className={styles.ctaButton}>
-                contact@noro-immobilier.sn
+              <a href="mailto:immonoro@gmail.com" className={styles.ctaButton}>
+                immonoro@gmail.com
               </a>
             </div>
 

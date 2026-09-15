@@ -121,7 +121,7 @@ export default function BienCard({ bien }) {
             Voir le détail
           </Link>
           <a
-            href="https://wa.me/221770000000"
+            href="https://wa.me/221777923906"
             aria-label="Contacter par WhatsApp"
             className={styles.whatsappBtn}
             title="Contacter sur WhatsApp"
