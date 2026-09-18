@@ -146,18 +146,19 @@ export default function SiteHeader({ openContact }) {
 
         {isMobile && menuOpen && (
           <nav className={styles.mobileNav}>
-            <Link to="/acheter">Acheter</Link>
-            <Link to="/louer">Louer</Link>
-            <Link to="/vendre">Vendre</Link>
-            <Link to="/gestion-locative">Gestion locative</Link>
-            <Link to="/construction">Construction</Link>
-            <Link to="/programmes">Programmes</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/acheter" onClick={() => setMenuOpen(false)}>Acheter</Link>
+            <Link to="/louer" onClick={() => setMenuOpen(false)}>Louer</Link>
+            <Link to="/vendre" onClick={() => setMenuOpen(false)}>Vendre</Link>
+            <Link to="/gestion-locative" onClick={() => setMenuOpen(false)}>Gestion locative</Link>
+            <Link to="/construction" onClick={() => setMenuOpen(false)}>Construction</Link>
+            <Link to="/programmes" onClick={() => setMenuOpen(false)}>Programmes</Link>
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
             <a
               href="#"
               className={styles.mobileCta}
               onClick={(e) => {
                 e.preventDefault()
+                setMenuOpen(false)
                 openContact('rdv')
               }}
             >
