@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import SiteHeader from './components/SiteHeader'
 import SiteFooter from './components/SiteFooter'
 import ContactModal from './components/ContactModal'
@@ -16,6 +16,18 @@ import ContactPage from './pages/ContactPage'
 import MentionsLegalesPage from './pages/MentionsLegalesPage'
 import ConfidentialitePage from './pages/ConfidentialitePage'
 import CGUPage from './pages/CGUPage'
+
+function AnalyticsTracker() {
+  const location = useLocation()
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'G-7LMYWKV370', {
+        page_path: location.pathname + location.search,
+      })
+    }
+  }, [location])
+  return null
+}
 
 function Layout({ children, openContact }) {
   return (
@@ -38,6 +50,7 @@ export default function App() {
 
   return (
     <Router>
+      <AnalyticsTracker />
       <ContactModal
         isOpen={contactModalOpen}
         onClose={() => setContactModalOpen(false)}

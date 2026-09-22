@@ -92,7 +92,7 @@ export default function ConfidentialitePage() {
             {/* Cookies */}
             <h2 id="cookies" className={styles.sectionTitle}>Cookies</h2>
             <p className={styles.sectionText}>
-              Ce site peut utiliser des cookies techniques nécessaires à son bon fonctionnement, par exemple la préférence de langue. Aucun cookie publicitaire tiers n'est utilisé sans votre consentement.
+              Ce site utilise des cookies techniques nécessaires à son bon fonctionnement, ainsi que Google Analytics pour mesurer l'audience du site (nombre de visiteurs, pages consultées, provenance). Ces données sont anonymisées et ne permettent pas de vous identifier personnellement. Aucun cookie publicitaire tiers n'est utilisé sans votre consentement. Vous pouvez désactiver ces cookies via les paramètres de votre navigateur ou via un bloqueur de cookies/trackers.
             </p>
 
             {/* Footer Links */}
